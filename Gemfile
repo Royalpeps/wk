@@ -10,10 +10,10 @@ gem 'rails', '5.0.4'
 gem 'redis'
 
 gem 'autoprefixer-rails'
-gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
 gem 'sass-rails'
+gem 'materialize-sass', '~> 0.96.1'
 gem 'simple_form'
 gem 'uglifier'
 
