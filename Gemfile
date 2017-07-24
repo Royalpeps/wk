@@ -13,6 +13,7 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
 gem 'sass-rails'
+gem 'materialize-sass', '~> 0.96.1'
 gem 'simple_form'
 gem 'uglifier'
 
