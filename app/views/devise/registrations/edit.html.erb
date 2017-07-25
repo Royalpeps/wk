@@ -4,19 +4,36 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <% if @insurance_name != nil %>
     <%= f.input :email, required: true, autofocus: true %>
-
+    <% end %>
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
-
+    <% if @insurance_name != nil %>
     <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
     <%= f.input :password_confirmation, required: false %>
     <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+    <% end %>
+
+    <%= f.input :first_name, required: true %>
+    <%= f.input :last_name, required: true %>
+    <%= f.input :address, required: true %>
+    <%= f.input :phone_number, required: true %>
+    <%= f.input :profession, required: true %>
+    <%= f.input :beneficiary_number, required: true %>
+    <%= f.input :insurance_name, required: true %>
+    <%= f.input :insurance_address, required: true %>
+    <%= f.input :insurance_policy, required: true %>
+
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <% if @insurance_name != nil %>
+    <%= f.button :submit, "Mettre à jour" %>
+    <% else %>
+    <%= f.button :submit, "Enregistrer" %>
+    <% end %>
   </div>
 <% end %>
 
