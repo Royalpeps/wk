@@ -1,2 +1,32 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="parallax-container">
+    <div class="parallax"><%= image_tag "parallax1.jpg", alt: "Parallax1" %></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header center-align">Bienvenue</h2>
+      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><%= image_tag "work.jpg", alt: "Parallax2" %></div>
+  </div>
+  <div class="row container">
+    <h2 class="header center-align">Coworking</h2>
+    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><%= image_tag "baby.jpg", alt: "Parallax2" %></div>
+  </div>
+  <div class="row container">
+    <h2 class="header center-align">Micro-crèche</h2>
+    <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+  </div>
+
+
+<%= content_for(:after_js) do %>
+<script>
+  $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+ </script>
+<% end %>
