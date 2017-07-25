@@ -17,6 +17,6 @@
     <%= w.hidden_field :reservation_id, :value => @reservation.id %>
   <% end %>
 
-  <%= r.input :number_of_weeks %>
+  <%= r.input :number_of_weeks, required: true %>
   <%= r.button :submit, "Submit", class: "btn btn-primary btn-lg" %>
 <% end %>
