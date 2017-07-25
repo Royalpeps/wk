@@ -2,3 +2,48 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.grey-text {
+  text-align: center;
+}
+p {
+  text-align: center;
+  font-size: 19px;
+}
+h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+body {
+  font-family: monospace;
+  margin: 0px;
+}
+.parallax {
+  opacity: 0.75;
+}
+
+.grey.lighten-4 {
+    background-color: #f5f5f5 !important;
+}
+.page-cover {
+  height: 90vh;
+}
+#final-white {
+  height: 20vh;
+}
+.text {
+  font-size: 25px;
+  text-shadow: 2px 2px 2px $pink;
+
+}
+#first-head {
+  text-shadow: 2px 2px 2px $pink;
+  margin-top: 150px;
+}
+.page-cover h2 {
+  padding-bottom: 50px;
+}
+
+// body {
+//   background-color: #eeeeee;
+// }
+
