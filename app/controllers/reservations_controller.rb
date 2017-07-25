@@ -2,7 +2,7 @@ class ReservationsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show]
 
   def new
-    @reservation = Reservation.new(user: current_user, workplace_id: 4)
+    @reservation = Reservation.new(user: current_user, workplace_id: Workplace.first.id)
     @reservation.save
     @reservation.build_weekly_schedule
 
