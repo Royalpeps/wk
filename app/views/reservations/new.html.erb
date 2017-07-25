@@ -1,0 +1,24 @@
+<h1>Reservations#new</h1>
+
+
+<%= simple_form_for @reservation do |r| %>
+  <%= r.hidden_field :user_id, :value => current_user.id %>
+  <%= r.hidden_field :workplace_id, :value => 2 %>
+
+  <%= r.simple_fields_for :weekly_schedule do |w| %>
+    <%= w.input :worker_monday_morning, required: true %>
+    <%= w.input :worker_monday_afternoon, required: true %>
+    <%= w.input :worker_tuesday_morning, required: true %>
+    <%= w.input :worker_tuesday_afternoon, required: true %>
+    <%= w.input :worker_wednesday_morning, required: true %>
+    <%= w.input :worker_wednesday_afternoon, required: true %>
+    <%= w.input :worker_thursday_morning, required: true %>
+    <%= w.input :worker_thursday_afternoon, required: true %>
+    <%= w.input :worker_friday_morning, required: true %>
+    <%= w.input :worker_friday_afternoon, required: true %>
+    <%= w.hidden_field :reservation_id, :value => @reservation.id %>
+  <% end %>
+
+  <%= r.input :number_of_weeks %>
+  <%= r.button :submit, "Submit", class: "btn btn-primary btn-lg" %>
+<% end %>
