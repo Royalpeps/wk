@@ -2,8 +2,6 @@
 
 
 <%= simple_form_for @reservation do |r| %>
-  <%= r.hidden_field :user_id, :value => current_user.id %>
-  <%= r.hidden_field :workplace_id, :value => 2 %>
 
   <%= r.simple_fields_for :weekly_schedule do |w| %>
     <%= w.input :worker_monday_morning, required: true %>
