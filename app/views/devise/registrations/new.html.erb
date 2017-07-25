@@ -6,11 +6,9 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <i class="material-icons left">email</i>
-      <%= f.input :email, required: true, autofocus: true %>
-      <i class="material-icons left">vpn_key</i>
-      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-      <%= f.input :password_confirmation, required: true %>
+      <%= f.input :email, required: true, autofocus: true, wrapper_html: { class: 'input-field' }  %>
+      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), wrapper_html: { class: 'input-field' }  %>
+      <%= f.input :password_confirmation, required: true, wrapper_html: { class: 'input-field' }  %>
     </div>
 
     <div class="form-actions">
@@ -21,12 +19,3 @@
     <%= render "devise/shared/links" %>
   </div>
 </div>
-
-
-<%= content_for(:after_js) do %>
-<script>
-$(document).ready(function() {
-    Materialize.updateTextFields();
-  });
- </script>
-<% end %>
