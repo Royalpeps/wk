@@ -13,6 +13,7 @@ WeeklySchedule.destroy_all
 Reservation.destroy_all
 Workplace.destroy_all
 Kid.destroy_all
+ClientDatum.destroy_all
 User.destroy_all
 
 workplace = Workplace.create!({
@@ -68,6 +69,7 @@ vincent = User.create!({
   email: "vhrvhr@gmail.com",
   admin: false,
   password: "secret"
+})
 
 vincentdata = ClientDatum.create!({
   user: vincent,
@@ -90,7 +92,7 @@ gus = User.create!({
 }
 )
 
-gusdata = User.create!({
+gusdata = ClientDatum.create!({
   user: gus,
   first_name: "Gus",
   last_name: "Feraud",
@@ -111,7 +113,7 @@ constantin = User.create!({
 }
 )
 
-constantin = User.create!({
+constantindata = ClientDatum.create!({
   user: constantin,
   first_name: "Constantin",
   last_name: "Pahl",
