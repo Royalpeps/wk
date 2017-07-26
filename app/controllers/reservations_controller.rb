@@ -5,7 +5,10 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(user: current_user, workplace_id: Workplace.first.id)
     @reservation.save
     @reservation.build_weekly_schedule
+  end
 
+  def edit
+    @reservation = Reservation.find(params[:id])
   end
 
   def update
@@ -16,11 +19,11 @@ class ReservationsController < ApplicationController
 
     @week.reservation = @reservation
     if @week.save
-      redirect_to root_path
-      flash[:notice] = "Réservation envoyée !"
+      redirect_to new_client_datum_path
+      flash[:notice] = "Semaine type enregistrée !"
     else
       render :new
-      flash[:alert] = "La réservation n'a pas fonctionné, veuillez recommencer."
+      flash[:alert] = "L'enregistrement n'a pas fonctionné, veuillez recommencer."
     end
   end
 
