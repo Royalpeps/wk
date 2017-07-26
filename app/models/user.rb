@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_one :reservation
   has_many :kids
   has_one :weekly_schedule, through: :reservation
+  has_one :client_datum
 end
