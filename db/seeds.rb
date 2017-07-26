@@ -109,7 +109,7 @@ gusdata = ClientDatum.create!({
 constantin = User.create!({
   email: "consti11@gmail.com",
   admin: false,
-  password: "secret"
+  password: "secret1"
 }
 )
 
