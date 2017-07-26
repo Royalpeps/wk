@@ -2,9 +2,28 @@ class ReservationsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show]
 
   def new
-    @reservation = Reservation.new(user: current_user, workplace_id: Workplace.first.id)
-    @reservation.save
-    @reservation.build_weekly_schedule
+    @reservation = Reservation.new
+    @week = WeeklySchedule.new
+  end
+
+  def create
+    @reservation = Reservation.new(reservation_params)
+    @week = WeeklySchedule.new(week_params)
+    @week.reservation = @reservation
+
+    if @reservation.save
+      @week.reservation = @reservation
+      if @week.save
+        redirect_to new_client_datum_path
+        flash[:notice] = "Semaine type enregistrée !"
+      else
+        render :new
+        flash[:alert] = "L'enregistrement n'a pas fonctionné, veuillez recommencer."
+      end
+    else
+      render :new
+      flash[:alert] = "L'enregistrement n'a pass fonctionné, veuillez recommencer."
+    end
   end
 
   def edit
@@ -12,18 +31,24 @@ class ReservationsController < ApplicationController
   end
 
   def update
-    @week = WeeklySchedule.new(reservation_params[:weekly_schedule_attributes])
     @reservation = Reservation.find(params[:id])
-    @reservation.number_of_weeks = reservation_params[:number_of_weeks]
-    @reservation.save
 
-    @week.reservation = @reservation
-    if @week.save
-      redirect_to new_client_datum_path
-      flash[:notice] = "Semaine type enregistrée !"
+    @reservation.update(reservation_update_params)
+    @week = @reservation.weekly_schedule
+    @week.update(week_update_params[:weekly_schedule_attributes])
+
+    if @reservation.save
+      @week.reservation = @reservation
+      if @week.save
+        redirect_to reservation_path(current_user.reservation)
+        flash[:notice] = "Semaine type enregistrée !"
+      else
+        render :new
+        flash[:alert] = "L'enregistrement n'a pas fonctionné, veuillez recommencer."
+      end
     else
       render :new
-      flash[:alert] = "L'enregistrement n'a pas fonctionné, veuillez recommencer."
+      flash[:alert] = "L'enregistrement n'a pass fonctionné, veuillez recommencer."
     end
   end
 
@@ -33,7 +58,19 @@ class ReservationsController < ApplicationController
 
   private
 
+  def week_params
+    params.require(:weekly_schedule).permit(:worker_monday_morning, :worker_monday_afternoon, :worker_tuesday_morning, :worker_tuesday_afternoon, :worker_wednesday_morning, :worker_wednesday_afternoon, :worker_thursday_morning, :worker_thursday_afternoon, :worker_friday_morning, :worker_friday_afternoon)
+  end
+
   def reservation_params
-    params.require(:reservation).permit(:user_id, :workplace_id, :number_of_weeks, weekly_schedule_attributes: [:worker_monday_morning])
+    params.require(:reservation).permit(:user_id, :workplace_id, :number_of_weeks)
+  end
+
+  def reservation_update_params
+    params.require(:reservation).permit(:number_of_weeks)
+  end
+
+  def week_update_params
+    params.require(:reservation).permit(weekly_schedule_attributes: [:worker_monday_morning, :worker_monday_afternoon, :worker_tuesday_morning, :worker_tuesday_afternoon, :worker_wednesday_morning, :worker_wednesday_afternoon, :worker_thursday_morning, :worker_thursday_afternoon, :worker_friday_morning, :worker_friday_afternoon])
   end
 end
