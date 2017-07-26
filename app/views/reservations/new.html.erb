@@ -1,22 +1,85 @@
-<h1>Reservations#new</h1>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h2 class="center-align">Réservation de votre semaine</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+</div>
 
-
-<%= simple_form_for @reservation do |r| %>
-
+<div class="container">
+  <div class="divider"></div>
+  <%= simple_form_for @reservation do |r| %>
   <%= r.simple_fields_for :weekly_schedule do |w| %>
-    <%= w.input :worker_monday_morning, required: true %>
-    <%= w.input :worker_monday_afternoon, required: true %>
-    <%= w.input :worker_tuesday_morning, required: true %>
-    <%= w.input :worker_tuesday_afternoon, required: true %>
-    <%= w.input :worker_wednesday_morning, required: true %>
-    <%= w.input :worker_wednesday_afternoon, required: true %>
-    <%= w.input :worker_thursday_morning, required: true %>
-    <%= w.input :worker_thursday_afternoon, required: true %>
-    <%= w.input :worker_friday_morning, required: true %>
-    <%= w.input :worker_friday_afternoon, required: true %>
-    <%= w.hidden_field :reservation_id, :value => @reservation.id %>
-  <% end %>
+  <div class="section">
+    <h4 class="center-align">Lundi</h4>
+    <div class="row center-align">
+      <div class="col s12 m6">
+        <%= w.input :worker_monday_morning, required: true %>
+      </div>
+      <div class="col s12 m6">
+        <%= w.input :worker_monday_afternoon, required: true %>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+    <h4 class="center-align">Mardi</h4>
+    <div class="row center-align">
+      <div class="col s12 m6">
+        <%= w.input :worker_tuesday_morning, required: true %>
+      </div>
+      <div class="col s12 m6">
+        <%= w.input :worker_tuesday_afternoon, required: true %>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+    <h4 class="center-align">Mercredi</h4>
+    <div class="row center-align">
+      <div class="col s12 m6">
+        <%= w.input :worker_wednesday_morning, required: true %>
+      </div>
+      <div class="col s12 m6">
+        <%= w.input :worker_wednesday_afternoon, required: true %>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+    <h4 class="center-align">Jeudi</h4>
+    <div class="row center-align">
+      <div class="col s12 m6">
+        <%= w.input :worker_thursday_morning, required: true %>
+      </div>
+      <div class="col s12 m6">
+        <%= w.input :worker_thursday_afternoon, required: true %>
+      </div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+    <h4 class="center-align">Vendredi</h4>
+    <div class="row center-align">
+      <div class="col s12 m6">
+        <%= w.input :worker_friday_morning, required: true %>
+      </div>
+      <div class="col s12 m6">
+        <%= w.input :worker_friday_afternoon, required: true %>
+      </div>
+    </div>
+  </div>
 
-  <%= r.input :number_of_weeks, required: true %>
-  <%= r.button :submit, "Submit", class: "btn btn-primary btn-lg" %>
-<% end %>
+  <%= w.hidden_field :reservation_id, :value => @reservation.id %>
+  <% end %>
+  <div class="container center-align">
+    <div class="row">
+      <div class="col s12">
+        <%= r.input :number_of_weeks, required: true %>
+        <%= r.button :submit, "Submit", class: "btn btn-primary btn-lg" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
