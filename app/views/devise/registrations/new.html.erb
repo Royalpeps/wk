@@ -10,12 +10,12 @@
 
           <div class="form-inputs">
             <%= f.input :email, required: true, autofocus: true, wrapper_html: { class: 'input-field' }  %>
-            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), wrapper_html: { class: 'input-field' }  %>
+            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} charactères minimum" if @minimum_password_length), wrapper_html: { class: 'input-field' }  %>
             <%= f.input :password_confirmation, required: true, wrapper_html: { class: 'input-field' }  %>
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Sign up" %>
+            <%= f.button :submit, "S'enregistrer" %>
           </div>
           <% end %>
 

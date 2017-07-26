@@ -2,7 +2,7 @@
 
 <%= simple_form_for(@client_datum) do |f| %>
   <%= f.error_notification %>
-
+<h2>Mes informations</h2>
   <%= f.input :first_name, required: true, autofocus: true %>
   <%= f.input :last_name, required: true, autofocus: true %>
   <%= f.input :address, required: true %>
@@ -12,6 +12,34 @@
   <%= f.input :insurance_name, required: true, autofocus: true %>
   <%= f.input :insurance_address, required: true, autofocus: true %>
   <%= f.input :insurance_policy, required: true, autofocus: true %>
+<h2>Mon enfant</h2>
+<div class="string required kid_first_name">
+  <div class="input-field">
+    <label class="string required" for="kid_first_name">
+      <abbr title="required">*</abbr>
+      First name
+    </label>
+    <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[first_name]" id="kid_first_name" />
+  </div>
+</div>
+<div class="string required kid_last_name">
+  <div class="input-field">
+    <label class="string required" for="kid_last_name">
+      <abbr title="required">*</abbr>
+      Last name
+    </label>
+    <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[last_name]" id="kid_last_name" />
+  </div>
+</div>
+<div class="string required kid_birthday">
+  <div class="input-field">
+    <label class="string required" for="kid_birthday">
+      <abbr title="required">*</abbr>
+      Birthday
+    </label>
+    <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[birthday]" id="kid_birthday" />
+  </div>
+</div>
 
 
   <%= f.button :submit, "Enregistrer", class: "btn btn-primary btn-lg" %>

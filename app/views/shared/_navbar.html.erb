@@ -1,25 +1,28 @@
 <nav>
-   <div class="nav-wrapper">
-     <a href="#!" class="brand-logo"><%= image_tag "family.png", alt: "Logo" %></a>
-     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-     <ul class="right hide-on-med-and-down">
-       <li><a href="#">Inscription</a></li>
-       <li><a href="#">Connexion</a></li>
-       <li><a href="#">Déconnexion</a></li>
-     </ul>
-     <ul class="side-nav" id="mobile-demo">
-       <li><a href="#">Inscription</a></li>
-       <li><a href="#">Connexion</a></li>
-       <li><a href="#">Déconnexion</a></li>
-     </ul>
-   </div>
- </nav>
+  <div class="nav-wrapper">
+    <%= link_to root_path, class: "brand-logo" do %>
+    <%= image_tag "family.png", alt: "Logo" %>
+    <% end %>
+
+    <% if current_user %>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to "Dashboard", dashboard_path %></li>
+      <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
+    </ul>
+    <% else %>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to "Connexion", new_user_session_path %></li>
+      <li><%= link_to "Inscription", new_user_registration_path %></li>
+    </ul>
+    <% end %>
+  </div>
+</nav>
 
 
- <%= content_for(:after_js) do %>
- <script>
-    $(document).ready(function() {
-       $(".button-collapse").sideNav();
-    });
-  </script>
- <% end %>
+<%= content_for(:after_js) do %>
+<script>
+$(document).ready(function() {
+  $(".button-collapse").sideNav();
+});
+</script>
+<% end %>
