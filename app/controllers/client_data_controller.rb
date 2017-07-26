@@ -9,9 +9,9 @@ class ClientDataController < ApplicationController
   def create
     @client_datum = ClientDatum.new(client_datum_params)
     @client_datum.user = current_user
-
+    @reservation = current_user.reservation
     if @client_datum.save
-      redirect_to root_path
+      redirect_to reservation_path(@reservation)
       flash[:notice] = "Votre réservation a été prise en compte !"
     else
       flash[:alert] = "Une erreur s'est produite, veuillez réessayer."
