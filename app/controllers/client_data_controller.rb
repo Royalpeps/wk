@@ -1,5 +1,6 @@
 class ClientDataController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update]
+  before_action :set_client_datum, only: [:edit, :update]
 
   def new
     @client_datum = ClientDatum.new
@@ -22,6 +23,15 @@ class ClientDataController < ApplicationController
   end
 
   def update
+    @client_datum.update(client_datum_params)
+
+    if @client_datum.save
+      redirect_to root_path
+      flash[:notice] = "Vos modifications ont été prises en compte !"
+    else
+      flash[:alert] = "Une erreur s'est produite, veuillez réessayer."
+      render :edit
+    end
   end
 
   private
