@@ -52,44 +52,50 @@
         </div>
       </div>
     </div>
-    
-    <div class="string required kid_first_name">
-  <div class="input-field">
-    <label class="string required" for="kid_first_name">
-      <abbr title="required">*</abbr>
-      First name
-    </label>
-    <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[first_name]" id="kid_first_name" />
-  </div>
-</div>
-<div class="string required kid_last_name">
-  <div class="input-field">
-    <label class="string required" for="kid_last_name">
-      <abbr title="required">*</abbr>
-      Last name
-    </label>
-    <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[last_name]" id="kid_last_name" />
-  </div>
-</div>
-<div class="string required kid_birthday">
-  <div class="input-field">
-    <label class="string required" for="kid_birthday">
-      <abbr title="required">*</abbr>
-      Birthday
-    </label>
-    <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[birthday]" id="kid_birthday" />
-  </div>
-</div>
-    
-    
+
+    <div class="col s12">
+      <div class="card-panel z-depth-2">
+        <h4 class="center-align">Informations de mon enfant
+          <i class="material-icons">edit</i>
+        </h4>
+        <div class="input-field">
+          <div class="string required kid_first_name">
+            <div class="input-field">
+              <label class="string required" for="kid_first_name">
+                <abbr title="required">*</abbr>
+                First name
+              </label>
+              <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[first_name]" id="kid_first_name" />
+            </div>
+          </div>
+          <div class="string required kid_last_name">
+            <div class="input-field">
+              <label class="string required" for="kid_last_name">
+                <abbr title="required">*</abbr>
+                Last name
+              </label>
+              <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[last_name]" id="kid_last_name" />
+            </div>
+          </div>
+          <div class="string required kid_birthday">
+            <div class="input-field">
+              <label class="string required" for="kid_birthday">
+                <abbr title="required">*</abbr>
+                Birthday
+              </label>
+              <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[birthday]" id="kid_birthday" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container center-align">
       <div class="row">
         <div class="col s12">
-          <%= f.button :submit, "Enregistrer", class: "btn btn-primary btn-lg" %>
+          <input type="submit" name= "commit" value="Enregistrer" class="btn btn-primary btn-lg" data-disable-with="Enregistrement">
           <% end %>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>

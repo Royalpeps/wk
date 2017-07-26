@@ -4,41 +4,49 @@
     <%= image_tag "family.png", alt: "Logo" %>
     <% end %>
 
-    <% if current_user %>
+    <!-- <% if current_user %>
     <ul class="right hide-on-med-and-down">
       <li><%= link_to dashboard_path do %>
         <i class="material-icons", alt: "Dashboard"></i> Dashboard
+        <% end %>
       </li>
-      <li><%= link_to destroy_user_session_path, method: :delete %>
+      <li><%= link_to destroy_user_session_path, method: :delete do %>
         <i class="material-icons", alt: "Déconnexion"></i> Déconnexion
+        <% end %>
       </li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
       <li><%= link_to dashboard_path do %>
         <i class="material-icons", alt: "Dashboard"></i> Dashboard
+        <% end %>
       </li>
-      <li><%= link_to destroy_user_session_path, method: :delete %>
+      <li><%= link_to destroy_user_session_path, method: :delete do %>
         <i class="material-icons", alt: "Déconnexion"></i> Déconnexion
+        <% end %>
       </li>
     </ul>
     <% else %>
     <ul class="right hide-on-med-and-down">
-      <li><%= link_to new_user_session_path %>
+      <li><%= link_to new_user_session_path do %>
         <i class="material-icons", alt: "Connexion"></i> Connexion
+        <% end %>
       </li>
-      <li><%= link_to new_user_registration_path %>
+      <li><%= link_to new_user_registration_path do %>
         <i class="material-icons", alt: "Inscription"></i> Inscription
+        <% end %>
       </li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
-      <li><%= link_to new_user_session_path %>
+      <li><%= link_to new_user_session_path do %>
         <i class="material-icons", alt: "Connexion"></i> Connexion
+        <% end %>
       </li>
-      <li><%= link_to new_user_registration_path %>
+      <li><%= link_to new_user_registration_path do %>
         <i class="material-icons", alt: "Inscription"></i> Inscription
+        <% end %>
       </li>
     </ul>
-    <% end %>
+    <% end %> -->
   </div>
 </nav>
 

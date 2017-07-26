@@ -29,13 +29,14 @@ class ClientDataController < ApplicationController
   end
 
   def edit
+    @kid = current_user.kids.first
   end
 
   def update
     @client_datum.update(client_datum_params)
 
     if @client_datum.save
-      redirect_to root_path
+      redirect_to reservation_path(current_user.reservation)
       flash[:notice] = "Vos modifications ont été prises en compte !"
     else
       flash[:alert] = "Une erreur s'est produite, veuillez réessayer."
