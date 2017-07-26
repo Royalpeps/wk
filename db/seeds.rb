@@ -24,82 +24,104 @@ workplace = Workplace.create!({
 )
 
 hugo = User.create!({
+  email: "hugodaniel@gmail.com",
+  admin: false,
+  password: "secret"
+}
+)
+
+hugodata = ClientDatum.create!({
+  user: hugo,
   first_name: "Hugo",
   last_name: "Daniel",
-  email: "hugodaniel@gmail.com",
   address: "40 Quai Magellan 44000 Nantes",
   phone_number: "0645859685",
   profession: "Web Dev",
   beneficiary_number: "498946846",
   insurance_name: "MAAF",
   insurance_address: "Nantes",
-  insurance_policy: "59849a8d4z9a8d49",
-  admin: false,
-  password: "secret"
+  insurance_policy: "59849a8d4z9a8d49"
 }
 )
 
 thomas = User.create!({
+  email: "thomasperouze@gmail.com",
+  admin: false,
+  password: "secret"
+  })
+
+thomasdata = ClientDatum.create!({
+  user: thomas,
   first_name: "Thomas",
   last_name: "Perouze",
-  email: "thomasperouze@gmail.com",
   address: "12 Avenue des Abeilles 44000 Nantes",
   phone_number: "0645859686",
   profession: "Entrepreneur",
   beneficiary_number: "498946506",
   insurance_name: "MAAF",
   insurance_address: "Nantes",
-  insurance_policy: "4654654adzad65465",
-  admin: false,
-  password: "secret"
+  insurance_policy: "4654654adzad65465"
 }
 )
 
 vincent = User.create!({
+  email: "vhrvhr@gmail.com",
+  admin: false,
+  password: "secret"
+
+vincentdata = ClientDatum.create!({
+  user: vincent,
   first_name: "Vincent",
   last_name: "HR",
-  email: "vhrvhr@gmail.com",
   address: "1000 Quai du Lynx 44000 Nantes",
   phone_number: "0645859687",
   profession: "Web Dev",
   beneficiary_number: "498456846",
   insurance_name: "MAAF",
   insurance_address: "Nantes",
-  insurance_policy: "58549a8d4z9a8d49",
+  insurance_policy: "58549a8d4z9a8d49"
+}
+)
+
+gus = User.create!({
+  email: "gusferaud@gmail.com",
   admin: false,
   password: "secret"
 }
 )
 
-gus = User.create!({
+gusdata = User.create!({
+  user: gus,
   first_name: "Gus",
   last_name: "Feraud",
-  email: "gusferaud@gmail.com",
   address: "42 Quai Magellan 44000 Nantes",
   phone_number: "0645859785",
   profession: "Freelancer",
   beneficiary_number: "498946446",
   insurance_name: "MAAF",
   insurance_address: "Nantes",
-  insurance_policy: "59849a8d5z9a8d49",
+  insurance_policy: "59849a8d5z9a8d49"
+}
+)
+
+constantin = User.create!({
+  email: "consti11@gmail.com",
   admin: false,
   password: "secret"
 }
 )
 
 constantin = User.create!({
+  user: constantin,
   first_name: "Constantin",
   last_name: "Pahl",
-  email: "consti11@gmail.com",
   address: "48 Quai Megalent 44000 Nantes",
   phone_number: "0655859685",
   profession: "Web Dev",
   beneficiary_number: "898946846",
   insurance_name: "MAAF",
   insurance_address: "Nantes",
-  insurance_policy: "59949a8d4z9a8d49",
-  admin: false,
-  password: "secret"
+  insurance_policy: "59949a8d4z9a8d49"
 }
 )
 
