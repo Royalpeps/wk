@@ -10,24 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170726094124) do
+ActiveRecord::Schema.define(version: 20170726173848) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "client_data", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "address"
-    t.string   "phone_number"
-    t.string   "profession"
     t.string   "beneficiary_number"
     t.string   "insurance_name"
     t.string   "insurance_address"
     t.string   "insurance_policy"
     t.integer  "user_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "father_first_name"
+    t.string   "father_last_name"
+    t.string   "father_address"
+    t.string   "father_phone_number"
+    t.string   "father_profession"
+    t.string   "mother_first_name"
+    t.string   "mother_last_name"
+    t.string   "mother_address"
+    t.string   "mother_phone_number"
+    t.string   "mother_profession"
     t.index ["user_id"], name: "index_client_data_on_user_id", using: :btree
   end
 
