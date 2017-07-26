@@ -1,2 +1,20 @@
 <h1>UserData#edit</h1>
-<p>Find me in app/views/user_data/edit.html.erb</p>
+
+<h1>UserData#new</h1>
+
+<%= simple_form_for(@client_datum) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :first_name, required: true, autofocus: true %>
+  <%= f.input :last_name, required: true, autofocus: true %>
+  <%= f.input :address, required: true %>
+  <%= f.input :profession, required: true, autofocus: true %>
+  <%= f.input :phone_number, required: true, autofocus: true %>
+  <%= f.input :beneficiary_number, required: true, autofocus: true %>
+  <%= f.input :insurance_name, required: true, autofocus: true %>
+  <%= f.input :insurance_address, required: true, autofocus: true %>
+  <%= f.input :insurance_policy, required: true, autofocus: true %>
+
+
+  <%= f.button :submit, "Enregistrer", class: "btn btn-primary btn-lg" %>
+<% end %>
