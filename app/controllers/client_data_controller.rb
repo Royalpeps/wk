@@ -34,6 +34,8 @@ class ClientDataController < ApplicationController
 
   def update
     @client_datum.update(client_datum_params)
+    @kid = current_user.kids.first
+    @kid.update(kid_params)
 
     if @client_datum.save
       redirect_to reservation_path(current_user.reservation)
@@ -50,7 +52,7 @@ class ClientDataController < ApplicationController
   end
 
   def client_datum_params
-    params.require(:client_datum).permit(:first_name, :last_name, :address, :profession, :phone_number, :beneficiary_number, :insurance_name, :insurance_address, :insurance_policy)
+    params.require(:client_datum).permit(:father_first_name, :father_last_name, :father_address, :father_profession, :father_phone_number, :mother_first_name, :mother_last_name, :mother_address, :mother_profession, :mother_phone_number, :beneficiary_number, :insurance_name, :insurance_address, :insurance_policy)
   end
 
   def set_client_datum
