@@ -27,7 +27,8 @@ workplace = Workplace.create!({
 hugo = User.create!({
   email: "hugodaniel@gmail.com",
   admin: false,
-  password: "secret"
+  password: "secret",
+  remote_profile_pic_url: 'http://static.tvtropes.org/pmwiki/pub/images/calvin2_834.jpg'
 }
 )
 
