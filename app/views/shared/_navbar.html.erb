@@ -5,8 +5,7 @@
     <% end %>
 
     <% if current_user %>
-
-      <ul class="right hide-on-med-and-down">
+      <ul class="right hide-on-med-and-down" id="right-link">
         <% if current_user.admin %>
         <li><%= link_to "Admin", admin_root_path %></li>
         <% end %>
@@ -19,7 +18,7 @@
         <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
       </ul>
     <%else  %>
-      <ul class="right hide-on-med-and-down">
+      <ul class="right hide-on-med-and-down" id="right-link">
         <li><%= link_to "Connexion", new_user_session_path %></li>
         <li><%= link_to "Inscription", new_user_registration_path %></li>
       </ul>

@@ -8,7 +8,7 @@
 
 .main {
   flex: 1 0 auto;
-  padding-top: 20px;
+  padding-top: 10px;
   }
 .footer page-footer {
   padding-top: 0px;
@@ -20,8 +20,9 @@ footer.page-footer {
   padding-left: 0px;
   background-color: $pink;
 }
-.fa {
-  padding-left: 30px;
+.icone-fa {
+  display: flex;
+  justify-content: center;
 }
 
 .my-own-footer {
@@ -31,9 +32,9 @@ footer.page-footer {
 }
 
 .grey-text.text-lighten-4 {
-    color: #f5f5f5 !important;
-    text-align: left;
-    padding-left: 0px;
+  color: #f5f5f5 !important;
+  text-align: left;
+  padding-left: 40px;
 }
 .white-text {
   text-decoration: underline;

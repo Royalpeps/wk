@@ -11,6 +11,13 @@ gem 'redis'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
+gem "coffee-rails"
+gem "gmaps4rails"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
