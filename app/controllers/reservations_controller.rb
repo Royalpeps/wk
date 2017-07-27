@@ -28,17 +28,17 @@ class ReservationsController < ApplicationController
 
   def edit
     @reservation = Reservation.find(params[:id])
+    @week = @reservation.weekly_schedule
   end
 
   def update
     @reservation = Reservation.find(params[:id])
-
     @reservation.update(reservation_update_params)
+
     @week = @reservation.weekly_schedule
     @week.update(week_update_params[:weekly_schedule_attributes])
 
     if @reservation.save
-      @week.reservation = @reservation
       if @week.save
         redirect_to reservation_path(current_user.reservation)
         flash[:notice] = "Semaine type enregistrée !"
@@ -56,6 +56,18 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
   end
 
+  def confirm
+    @reservation = Reservation.find(params[:id])
+    @reservation.update(status: "Pending")
+
+    if @reservation.save
+      redirect_to reservation_path(current_user.reservation)
+      flash[:notice] = "Réservation confirmée !"
+    else
+      flash[:alert] = "L'enregistrement n'a pas fonctionné, veuillez recommencer."
+    end
+  end
+
   private
 
   def week_params
@@ -67,10 +79,14 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_update_params
-    params.require(:reservation).permit(:number_of_weeks)
+    params.require(:reservation).permit(:number_of_weeks, :status)
   end
 
   def week_update_params
     params.require(:reservation).permit(weekly_schedule_attributes: [:worker_monday_morning, :worker_monday_afternoon, :worker_tuesday_morning, :worker_tuesday_afternoon, :worker_wednesday_morning, :worker_wednesday_afternoon, :worker_thursday_morning, :worker_thursday_afternoon, :worker_friday_morning, :worker_friday_afternoon])
+  end
+
+  def status_update
+    params.require(:confirm).permit(:status)
   end
 end
