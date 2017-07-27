@@ -1,11 +1,226 @@
-<h1>Ma réservation</h1>
 
-Status : <%= @reservation.status %>
-<p>Ma semaine type :</p>
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h2 class="center-align">Récapitulatif de réservation</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</div>
 
-<p>Mes informations personnelles :</p>
+<div class="col s12">
+  <p>Récapitulatif de ma semaine type :</p>
+  <div class="row">
+    <div class="col s12 m4 l2">
+      <div class="card-panel center z-depth-2">
+        <h4 class="center">Lundi</h4>
+      </div>
+      <div class="card-panel center z-depth-2">
+        <div class=" boolean required weekly_schedule_worker_monday_morning">
+          <a name="weekly_schedule[worker_monday_morning]" type="hidden" value="0"/>
+          <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_monday_morning]" id="weekly_schedule_worker_monday_morning"/>
+          <a class="boolean required" for="weekly_schedule_worker_monday_morning">
+            Lundi Matin
+          </a>
+        </div>
+      </div>
+      <div class="card-panel center z-depth-2">
+        <div class="input boolean required weekly_schedule_worker_monday_afternoon">
+          <a name="weekly_schedule[worker_monday_afternoon]" type="hidden" value="0"/>
+          <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_monday_afternoon]" id="weekly_schedule_worker_monday_afternoon"/>
+          <a class="boolean required" for="weekly_schedule_worker_monday_afternoon">
+            Lundi Après-midi
+          </a>
+        </div>
+      </div>
+    </div>
 
-<%= link_to "Modifier ma semaine type", edit_reservation_path(current_user.reservation), class: "btn btn-primary btn-lg" %>
-<%= link_to "Modifier mes infos", edit_client_datum_path(current_user.client_datum), class: "btn btn-primary btn-lg" %>
+  <div class="col s12 m4 l2">
+  <div class="card-panel center z-depth-2">
+    <h4 class="center">Mardi</h4>
+  </div>
+  <div class="card-panel center">
+    <div class="input boolean required weekly_schedule_worker_tuesday_morning center">
+      <a name="weekly_schedule[worker_tuesday_morning]" type="hidden" value="0"/>
+      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_tuesday_morning]" id="weekly_schedule_worker_tuesday_morning"/>
+      <a class="boolean required" for="weekly_schedule_worker_tuesday_morning">
+        Mardi Matin
+      </a>
+    </div>
+  </div>
+  <div class="card-panel center z-depth-2">
+    <div class="input boolean required weekly_schedule_worker_tuesday_afternoon center">
+      <a name="weekly_schedule[worker_tuesday_afternoon]" type="hidden" value="0"/>
+      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_tuesday_afternoon]" id="weekly_schedule_worker_tuesday_afternoon"/>
+      <a class="boolean required" for="weekly_schedule_worker_tuesday_afternoon">
+        Mardi Après-midi
+      </a>
+    </div>
+  </div>
+</div>
+
+
+  <div class="col s12 m4 l2">
+  <div class="card-panel center z-depth-2">
+    <h4 class="center">Mercredi</h4>
+  </div>
+  <div class="card-panel center z-depth-2">
+    <div class="input boolean required weekly_schedule_worker_wednesday_morning center">
+      <a name="weekly_schedule[worker_wednesday_morning]" type="hidden" value="0"/>
+      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_wednesday_morning]" id="weekly_schedule_worker_wednesday_morning"/>
+      <a class="boolean required" for="weekly_schedule_worker_wednesday_morning">
+        Mercredi Matin
+      </a>
+    </div>
+  </div>
+  <div class="card-panel center z-depth-2">
+    <div class="input boolean required weekly_schedule_worker_wednesday_afternoon center">
+      <a name="weekly_schedule[worker_wednesday_afternoon]" type="hidden" value="0"/>
+      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_wednesday_afternoon]" id="weekly_schedule_worker_wednesday_afternoon"/>
+      <a class="boolean required" for="weekly_schedule_worker_wednesday_afternoon">
+        Mercredi Après-midi
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div class="col s12 m4 l2">
+  <div class="card-panel center z-depth-2">
+    <h4 class="center">Jeudi</h4>
+  </div>
+  <div class="card-panel center z-depth-2">
+    <div class="input boolean required weekly_schedule_worker_thursday_morning center">
+      <a name="weekly_schedule[worker_thursday_morning]" type="hidden" value="0"/>
+      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_thursday_morning]" id="weekly_schedule_worker_thursday_morning"/>
+      <a class="boolean required" for="weekly_schedule_worker_thursday_morning">
+        Jeudi Matin
+      </a>
+    </div>
+  </div>
+  <div class="card-panel center z-depth-2">
+    <div class="input boolean required weekly_schedule_worker_thursday_afternoon center">
+      <a name="weekly_schedule[worker_thursday_afternoon]" type="hidden" value="0"/>
+      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_thursday_afternoon]" id="weekly_schedule_worker_thursday_afternoon"/>
+      <a class="boolean required" for="weekly_schedule_worker_thursday_afternoon">
+        Jeudi Après-midi
+      </a>
+    </div>
+  </div>
+</div>
+
+
+  <div class="col s12 m4 l2">
+  <div class="card-panel center z-depth-2">
+    <h4 class="center">Vendredi</h4>
+  </div>
+  <div class="card-panel center z-depth-2">
+    <div class="input boolean required weekly_schedule_worker_friday_morning center">
+      <a name="weekly_schedule[worker_friday_morning]" type="hidden" value="0"/>
+      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_friday_morning]" id="weekly_schedule_worker_friday_morning"/>
+      <a class="boolean required" for="weekly_schedule_worker_friday_morning">
+        Vendredi Matin
+      </a>
+    </div>
+  </div>
+  <div class="card-panel center z-depth-2">
+    <div class="input boolean required weekly_schedule_worker_friday_afternoon center">
+      <a name="weekly_schedule[worker_friday_afternoon]" type="hidden" value="0"/>
+      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_friday_afternoon]" id="weekly_schedule_worker_friday_afternoon"/>
+      <a class="boolean required" for="weekly_schedule_worker_friday_afternoon">
+        Vendredi Après-midi
+      </a>
+    </div>
+  </div>
+</div>
+
+
+  <div class="col s12 m4 l2">
+  <div class="card-panel center z-depth-2">
+    <h4 class="center">Récurrence</h4>
+  </div>
+  <div class="card-panel center z-depth-2">
+    <p>Afficher le nombre de semaine</p>
+  </div>
+</div>
+
+
+<div class="col s12">
+  <div class="center"><a class="waves-effect waves-light btn" <%= link_to "Modifier ma semaine type", edit_reservation_path(current_user.reservation) %></a>
+</div>
+</div>
+</div>
+
+
+<div class="container">
+  <p>Récapitulatif de mes informations personnelles :</p>
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card-panel z-depth-2">
+        <h4 class="center-align">Père
+          <i class="material-icons">edit</i>
+        </h4>
+        <div>
+          <p>father_first_name</p>
+          <p>father_last_name</p>
+          <p>father_profession</p>
+          <p>father_phone_number</p>
+          <p>father_address</p>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <div class="card-panel z-depth-2">
+        <h4 class="center-align">Mère
+          <i class="material-icons">edit</i>
+        </h4>
+        <div>
+          <p>mother_first_name</p>
+          <p>mother_last_name</p>
+          <p>mother_profession</p>
+          <p>mother_phone_number</p>
+          <p>mother_address</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="card-panel z-depth-2">
+        <h4 class="center-align">Informations administratives
+          <i class="material-icons">edit</i>
+        </h4>
+        <div>
+          <p>beneficiary_number</p>
+          <p>insurance_name</p>
+          <p>insurance_address</p>
+          <p>insurance_policy</p>
+        </div>
+      </div>
+    </div>
+    <div class="col s12">
+      <div class="card-panel z-depth-2">
+        <h4 class="center-align">Informations de mon enfant
+          <i class="material-icons">edit</i>
+        </h4>
+        <div>
+          <p>first_name</p>
+          <p>last_name</p>
+          <p>birthday</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+<div class="center"><a class="waves-effect waves-light btn" <%= link_to "Modifier mes informations", edit_client_datum_path(current_user.client_datum) %></a>
+</div>
 
 <%= link_to "Valider ma réservation", confirm_path(current_user.reservation), method: :patch, class: "btn btn-primary btn-lg" %>
+

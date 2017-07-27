@@ -54,6 +54,7 @@ class ReservationsController < ApplicationController
   end
 
   def show
+    @week = @reservation.weekly_schedule
   end
 
   def confirm
