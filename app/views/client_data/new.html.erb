@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h2 class="center-align">Veuillez entrer vos informations personnelles</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card-panel z-depth-2">
+        <%= simple_form_for(@client_datum) do |f| %>
+        <%= f.error_notification %>
+        <h4 class="center-align">Père
+          <i class="material-icons">edit</i>
+        </h4>
+        <div class="input-field">
+          <%= f.input :father_first_name, required: true, autofocus: true %>
+          <%= f.input :father_last_name, required: true, autofocus: true %>
+          <%= f.input :father_profession, required: true, autofocus: true %>
+          <%= f.input :father_phone_number, required: true, autofocus: true %>
+          <%= f.input :father_address, required: true %>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m6">
+      <div class="card-panel z-depth-2">
+        <h4 class="center-align">Mère
+          <i class="material-icons">edit</i>
+        </h4>
+        <div class="input-field">
+          <%= f.input :mother_first_name, required: true, autofocus: true %>
+          <%= f.input :mother_last_name, required: true, autofocus: true %>
+          <%= f.input :mother_profession, required: true, autofocus: true %>
+          <%= f.input :mother_phone_number, required: true, autofocus: true %>
+          <%= f.input :mother_address, required: true %>
+        </div>
+      </div>
+    </div>
+    <div class="col s12">
+      <div class="card-panel z-depth-2">
+        <h4 class="center-align">Informations administratives
+          <i class="material-icons">edit</i>
+        </h4>
+        <div class="input-field">
+          <%= f.input :beneficiary_number, required: true, autofocus: true %>
+          <%= f.input :insurance_name, required: true, autofocus: true %>
+          <%= f.input :insurance_address, required: true, autofocus: true %>
+          <%= f.input :insurance_policy, required: true, autofocus: true %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12">
+      <div class="card-panel z-depth-2">
+        <h4 class="center-align">Informations de mon enfant
+          <i class="material-icons">edit</i>
+        </h4>
+        <div class="input-field">
+          <div class="string required kid_first_name">
+            <div class="input-field">
+              <label class="string required" for="kid_first_name">
+                <abbr title="required">*</abbr>
+                First name
+              </label>
+              <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[first_name]" id="kid_first_name" />
+            </div>
+          </div>
+          <div class="string required kid_last_name">
+            <div class="input-field">
+              <label class="string required" for="kid_last_name">
+                <abbr title="required">*</abbr>
+                Last name
+              </label>
+              <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[last_name]" id="kid_last_name" />
+            </div>
+          </div>
+          <div class="string required kid_birthday">
+            <div class="input-field">
+              <label class="string required" for="kid_birthday">
+                <abbr title="required">*</abbr>
+                Birthday
+              </label>
+              <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[birthday]" id="kid_birthday" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container center-align">
+      <div class="row">
+        <div class="col s12">
+          <input type="submit" name= "commit" value="Enregistrer" class="btn btn-primary btn-lg" data-disable-with="Enregistrement">
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

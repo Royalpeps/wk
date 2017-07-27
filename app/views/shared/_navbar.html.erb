@@ -1,23 +1,60 @@
 <nav>
-   <div class="nav-wrapper">
-     <a href="#!" class="brand-logo">WorkPlace&Kids</a>
-     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-     <ul class="right hide-on-med-and-down">
-       <li><a href="#">Inscription</a></li>
-       <li><a href="#">Connexion</a></li>
-     </ul>
-     <ul class="side-nav" id="mobile-demo">
-       <li><a href="#">Inscription</a></li>
-       <li><a href="#">Connexion</a></li>
-     </ul>
-   </div>
- </nav>
+  <div class="nav-wrapper">
+    <%= link_to root_path, class: "brand-logo center" do %>
+    <%= image_tag "family.png", alt: "Logo" %>
+    <% end %>
+
+    <!-- <% if current_user %>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to dashboard_path do %>
+        <i class="material-icons", alt: "Dashboard"></i> Dashboard
+        <% end %>
+      </li>
+      <li><%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="material-icons", alt: "Déconnexion"></i> Déconnexion
+        <% end %>
+      </li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><%= link_to dashboard_path do %>
+        <i class="material-icons", alt: "Dashboard"></i> Dashboard
+        <% end %>
+      </li>
+      <li><%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="material-icons", alt: "Déconnexion"></i> Déconnexion
+        <% end %>
+      </li>
+    </ul>
+    <% else %>
+    <ul class="right hide-on-med-and-down">
+      <li><%= link_to new_user_session_path do %>
+        <i class="material-icons", alt: "Connexion"></i> Connexion
+        <% end %>
+      </li>
+      <li><%= link_to new_user_registration_path do %>
+        <i class="material-icons", alt: "Inscription"></i> Inscription
+        <% end %>
+      </li>
+    </ul>
+    <ul class="side-nav" id="mobile-demo">
+      <li><%= link_to new_user_session_path do %>
+        <i class="material-icons", alt: "Connexion"></i> Connexion
+        <% end %>
+      </li>
+      <li><%= link_to new_user_registration_path do %>
+        <i class="material-icons", alt: "Inscription"></i> Inscription
+        <% end %>
+      </li>
+    </ul>
+    <% end %> -->
+  </div>
+</nav>
 
 
- <%= content_for(:after_js) do %>
- <script>
-    $(document).ready(function() {
-       $(".button-collapse").sideNav();
-    });
-  </script>
- <% end %>
+<%= content_for(:after_js) do %>
+<script>
+$(document).ready(function() {
+  $(".button-collapse").sideNav();
+});
+</script>
+<% end %>

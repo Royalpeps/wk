@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  get 'weekly_schedules/create'
 
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :reservations, only: [:new, :update, :show]
+  resources :reservations, only: [:new, :create, :edit, :update, :show]
+  resources :client_data, only: [:new, :create, :edit, :update]
 
   namespace :account, as: '' do
     resource :dashboard, only: [:show], as: 'dashboard'
   end
+
 end

@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :reservation
-  has_many :kids
+  has_one :reservation, dependent: :destroy
+  has_many :kids, dependent: :destroy
   has_one :weekly_schedule, through: :reservation
+  has_one :client_datum, dependent: :destroy
 end

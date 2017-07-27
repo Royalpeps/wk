@@ -4,29 +4,39 @@ class ClientDataController < ApplicationController
 
   def new
     @client_datum = ClientDatum.new
+    @kid = Kid.new
   end
 
   def create
+    @kid = Kid.new(kid_params)
+    @kid.user = current_user
+
     @client_datum = ClientDatum.new(client_datum_params)
     @client_datum.user = current_user
-    @reservation = current_user.reservation
-    if @client_datum.save
-      redirect_to reservation_path(@reservation)
-      flash[:notice] = "Votre réservation a été prise en compte !"
+
+    if @kid.save
+      if @client_datum.save
+        redirect_to reservation_path(current_user.reservation)
+        flash[:notice] = "Votre profil a bien été enregistré !"
+      else
+        flash[:alert] = "Une erreur s'est produite, veuillez réessayer."
+        render :new
+      end
     else
-      flash[:alert] = "Une erreur s'est produite, veuillez réessayer."
+      flash[:alert] = "Une erreure s'est produite, veuillez réessayer."
       render :new
     end
   end
 
   def edit
+    @kid = current_user.kids.first
   end
 
   def update
     @client_datum.update(client_datum_params)
 
     if @client_datum.save
-      redirect_to root_path
+      redirect_to reservation_path(current_user.reservation)
       flash[:notice] = "Vos modifications ont été prises en compte !"
     else
       flash[:alert] = "Une erreur s'est produite, veuillez réessayer."
@@ -35,6 +45,9 @@ class ClientDataController < ApplicationController
   end
 
   private
+  def kid_params
+    params.require(:kid).permit(:first_name, :last_name, :birthday)
+  end
 
   def client_datum_params
     params.require(:client_datum).permit(:first_name, :last_name, :address, :profession, :phone_number, :beneficiary_number, :insurance_name, :insurance_address, :insurance_policy)
