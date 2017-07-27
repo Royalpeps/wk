@@ -13,6 +13,8 @@
     <%= f.input :password, autocomplete: "off", hint: "Ne pas remplir si vous ne voulez pas le modifier", required: false %>
     <%= f.input :password_confirmation, required: false %>
     <%= f.input :current_password, hint: "Nous avons besoin de votre mot de passe actuel pour valider la modification", required: true %>
+    <%= f.input :profile_pic %>
+    <%= f.input :profile_pic_cache, as: :hidden %>
 
   </div>
 

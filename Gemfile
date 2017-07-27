@@ -8,6 +8,8 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '5.0.4'
 gem 'redis'
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem "coffee-rails"
 gem "gmaps4rails"
@@ -23,6 +25,8 @@ gem 'sass-rails'
 gem 'materialize-sass', '= 0.100.1'
 gem 'simple_form'
 gem 'uglifier'
+gem 'cloudinary'
+gem 'carrierwave',  '~> 0.11.2'
 
 group :development, :test do
   gem 'better_errors'
