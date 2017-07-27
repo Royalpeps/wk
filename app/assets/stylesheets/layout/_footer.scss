@@ -23,11 +23,13 @@ footer.page-footer {
 .fa {
   padding-left: 30px;
 }
-.footer-copyright {
-  padding-left: 30px;
-  padding-right: 30px;
+
+.my-own-footer {
+  padding: 30px;
   width: 100%;
+  background-color: black;
 }
+
 .grey-text.text-lighten-4 {
     color: #f5f5f5 !important;
     text-align: left;
