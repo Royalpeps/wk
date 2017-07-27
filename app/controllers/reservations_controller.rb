@@ -1,5 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show]
+  before_action :set_reservation, only: [:edit, :update, :show, :confirm]
 
   def new
     @reservation = Reservation.new
@@ -8,6 +9,7 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
+    
     @week = WeeklySchedule.new(week_params)
     @week.reservation = @reservation
 
@@ -27,7 +29,6 @@ class ReservationsController < ApplicationController
   end
 
   def edit
-    @reservation = Reservation.find(params[:id])
     @week = @reservation.weekly_schedule
   end
 
@@ -53,11 +54,9 @@ class ReservationsController < ApplicationController
   end
 
   def show
-    @reservation = Reservation.find(params[:id])
   end
 
   def confirm
-    @reservation = Reservation.find(params[:id])
     @reservation.update(status: "Pending")
 
     if @reservation.save
@@ -69,6 +68,10 @@ class ReservationsController < ApplicationController
   end
 
   private
+
+  def set_reservation
+    @reservation = Reservation.find(params[:id])
+  end
 
   def week_params
     params.require(:weekly_schedule).permit(:worker_monday_morning, :worker_monday_afternoon, :worker_tuesday_morning, :worker_tuesday_afternoon, :worker_wednesday_morning, :worker_wednesday_afternoon, :worker_thursday_morning, :worker_thursday_afternoon, :worker_friday_morning, :worker_friday_afternoon)
