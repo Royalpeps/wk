@@ -54,7 +54,8 @@ hugodata = ClientDatum.create!({
 thomas = User.create!({
   email: "thomasperouze@gmail.com",
   admin: false,
-  password: "secret"
+  password: "secret",
+  remote_profile_pic_url: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAguAAAAJDFmZWJkMzJhLWM3YTgtNGE3Zi05NGY0LTFiZjQ1ZmI4ODA2Zg.jpg'
   })
 
 thomasdata = ClientDatum.create!({
@@ -79,7 +80,8 @@ thomasdata = ClientDatum.create!({
 vincent = User.create!({
   email: "vhrvhr@gmail.com",
   admin: false,
-  password: "secret"
+  password: "secret",
+  remote_profile_pic_url: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAeeAAAAJDgxNjEwMzFlLTQwNjEtNGI4NC04YjI3LTE2NWI3Njc5OTBjNw.jpg'
 })
 
 vincentdata = ClientDatum.create!({
@@ -104,7 +106,8 @@ vincentdata = ClientDatum.create!({
 gus = User.create!({
   email: "gusferaud@gmail.com",
   admin: false,
-  password: "secret"
+  password: "secret",
+  remote_profile_pic_url: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAArmAAAAJDI5N2ZhNDMyLTg2ZDctNDg0My1hZDU1LWI2ODZmZjBiYmNmYQ.jpg'
 }
 )
 
@@ -130,7 +133,8 @@ gusdata = ClientDatum.create!({
 constantin = User.create!({
   email: "consti11@gmail.com",
   admin: false,
-  password: "secret1"
+  password: "secret1",
+  remote_profile_pic_url: 'https://avatars2.githubusercontent.com/u/28560816?v=4&s=400'
 }
 )
 
