@@ -1,7 +1,11 @@
 <h1>Ma réservation</h1>
+
+Status : <%= @reservation.status %>
 <p>Ma semaine type :</p>
 
 <p>Mes informations personnelles :</p>
 
-<%= link_to "Modifier ma semaine type", edit_reservation_path(current_user.reservation) %>
-<%= link_to "Modifier mes infos", edit_client_datum_path(current_user.client_datum) %>
+<%= link_to "Modifier ma semaine type", edit_reservation_path(current_user.reservation), class: "btn btn-primary btn-lg" %>
+<%= link_to "Modifier mes infos", edit_client_datum_path(current_user.client_datum), class: "btn btn-primary btn-lg" %>
+
+<%= link_to "Valider ma réservation", confirm_path(current_user.reservation), method: :patch, class: "btn btn-primary btn-lg" %>
