@@ -16,48 +16,48 @@
       <div class="card-panel center z-depth-2">
         <h4 class="center">Lundi</h4>
       </div>
+      <% if @week.worker_monday_morning %>
       <div class="card-panel center z-depth-2">
-        <div class=" boolean required weekly_schedule_worker_monday_morning">
-          <a name="weekly_schedule[worker_monday_morning]" type="hidden" value="0"/>
-          <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_monday_morning]" id="weekly_schedule_worker_monday_morning"/>
-          <a class="boolean required" for="weekly_schedule_worker_monday_morning">
-            Lundi Matin
-          </a>
-        </div>
+          Matin
       </div>
+      <% else %>
       <div class="card-panel center z-depth-2">
-        <div class="input boolean required weekly_schedule_worker_monday_afternoon">
-          <a name="weekly_schedule[worker_monday_afternoon]" type="hidden" value="0"/>
-          <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_monday_afternoon]" id="weekly_schedule_worker_monday_afternoon"/>
-          <a class="boolean required" for="weekly_schedule_worker_monday_afternoon">
-            Lundi Après-midi
-          </a>
-        </div>
+          Matin
       </div>
+      <% end %>
+      <% if @week.worker_monday_afternoon %>
+      <div class="card-panel center z-depth-2">
+          Après-midi
+      </div>
+      <% else %>
+      <div class="card-panel center z-depth-2">
+          Après-midi
+      </div>
+      <% end %>
     </div>
 
   <div class="col s12 m4 l2">
   <div class="card-panel center z-depth-2">
     <h4 class="center">Mardi</h4>
   </div>
-  <div class="card-panel center">
-    <div class="input boolean required weekly_schedule_worker_tuesday_morning center">
-      <a name="weekly_schedule[worker_tuesday_morning]" type="hidden" value="0"/>
-      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_tuesday_morning]" id="weekly_schedule_worker_tuesday_morning"/>
-      <a class="boolean required" for="weekly_schedule_worker_tuesday_morning">
-        Mardi Matin
-      </a>
-    </div>
-  </div>
+  <% if @week.worker_tuesday_morning %>
   <div class="card-panel center z-depth-2">
-    <div class="input boolean required weekly_schedule_worker_tuesday_afternoon center">
-      <a name="weekly_schedule[worker_tuesday_afternoon]" type="hidden" value="0"/>
-      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_tuesday_afternoon]" id="weekly_schedule_worker_tuesday_afternoon"/>
-      <a class="boolean required" for="weekly_schedule_worker_tuesday_afternoon">
-        Mardi Après-midi
-      </a>
-    </div>
+      Matin
   </div>
+  <% else %>
+  <div class="card-panel center z-depth-2">
+      Matin
+  </div>
+  <% end %>
+  <% if @week.worker_tuesday_afternoon %>
+  <div class="card-panel center z-depth-2">
+      Après-midi
+  </div>
+  <% else %>
+  <div class="card-panel center z-depth-2">
+      Après-midi
+  </div>
+  <% end %>
 </div>
 
 
@@ -65,48 +65,48 @@
   <div class="card-panel center z-depth-2">
     <h4 class="center">Mercredi</h4>
   </div>
+  <% if @week.worker_wednesday_morning %>
   <div class="card-panel center z-depth-2">
-    <div class="input boolean required weekly_schedule_worker_wednesday_morning center">
-      <a name="weekly_schedule[worker_wednesday_morning]" type="hidden" value="0"/>
-      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_wednesday_morning]" id="weekly_schedule_worker_wednesday_morning"/>
-      <a class="boolean required" for="weekly_schedule_worker_wednesday_morning">
-        Mercredi Matin
-      </a>
-    </div>
+      Matin
   </div>
+  <% else %>
   <div class="card-panel center z-depth-2">
-    <div class="input boolean required weekly_schedule_worker_wednesday_afternoon center">
-      <a name="weekly_schedule[worker_wednesday_afternoon]" type="hidden" value="0"/>
-      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_wednesday_afternoon]" id="weekly_schedule_worker_wednesday_afternoon"/>
-      <a class="boolean required" for="weekly_schedule_worker_wednesday_afternoon">
-        Mercredi Après-midi
-      </a>
-    </div>
+      Matin
   </div>
+  <% end %>
+  <% if @week.worker_wednesday_afternoon %>
+  <div class="card-panel center z-depth-2">
+      Après-midi
+  </div>
+  <% else %>
+  <div class="card-panel center z-depth-2">
+      Après-midi
+  </div>
+  <% end %>
 </div>
 
   <div class="col s12 m4 l2">
   <div class="card-panel center z-depth-2">
     <h4 class="center">Jeudi</h4>
   </div>
+  <% if @week.worker_thursday_morning %>
   <div class="card-panel center z-depth-2">
-    <div class="input boolean required weekly_schedule_worker_thursday_morning center">
-      <a name="weekly_schedule[worker_thursday_morning]" type="hidden" value="0"/>
-      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_thursday_morning]" id="weekly_schedule_worker_thursday_morning"/>
-      <a class="boolean required" for="weekly_schedule_worker_thursday_morning">
-        Jeudi Matin
-      </a>
-    </div>
+      Matin
   </div>
+  <% else %>
   <div class="card-panel center z-depth-2">
-    <div class="input boolean required weekly_schedule_worker_thursday_afternoon center">
-      <a name="weekly_schedule[worker_thursday_afternoon]" type="hidden" value="0"/>
-      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_thursday_afternoon]" id="weekly_schedule_worker_thursday_afternoon"/>
-      <a class="boolean required" for="weekly_schedule_worker_thursday_afternoon">
-        Jeudi Après-midi
-      </a>
-    </div>
+      Matin
   </div>
+  <% end %>
+  <% if @week.worker_thursday_afternoon %>
+  <div class="card-panel center z-depth-2">
+      Après-midi
+  </div>
+  <% else %>
+  <div class="card-panel center z-depth-2">
+      Après-midi
+  </div>
+  <% end %>
 </div>
 
 
@@ -114,24 +114,24 @@
   <div class="card-panel center z-depth-2">
     <h4 class="center">Vendredi</h4>
   </div>
+  <% if @week.worker_friday_morning %>
   <div class="card-panel center z-depth-2">
-    <div class="input boolean required weekly_schedule_worker_friday_morning center">
-      <a name="weekly_schedule[worker_friday_morning]" type="hidden" value="0"/>
-      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_friday_morning]" id="weekly_schedule_worker_friday_morning"/>
-      <a class="boolean required" for="weekly_schedule_worker_friday_morning">
-        Vendredi Matin
-      </a>
-    </div>
+      Matin
   </div>
+  <% else %>
   <div class="card-panel center z-depth-2">
-    <div class="input boolean required weekly_schedule_worker_friday_afternoon center">
-      <a name="weekly_schedule[worker_friday_afternoon]" type="hidden" value="0"/>
-      <a class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_friday_afternoon]" id="weekly_schedule_worker_friday_afternoon"/>
-      <a class="boolean required" for="weekly_schedule_worker_friday_afternoon">
-        Vendredi Après-midi
-      </a>
-    </div>
+      Matin
   </div>
+  <% end %>
+  <% if @week.worker_friday_afternoon %>
+  <div class="card-panel center z-depth-2">
+      Après-midi
+  </div>
+  <% else %>
+  <div class="card-panel center z-depth-2">
+      Après-midi
+  </div>
+  <% end %>
 </div>
 
 
@@ -140,7 +140,7 @@
     <h4 class="center">Récurrence</h4>
   </div>
   <div class="card-panel center z-depth-2">
-    <p>Afficher le nombre de semaine</p>
+    <p><%= @reservation.number_of_weeks %></p>
   </div>
 </div>
 
@@ -161,11 +161,11 @@
           <i class="material-icons">edit</i>
         </h4>
         <div>
-          <p>father_first_name</p>
-          <p>father_last_name</p>
-          <p>father_profession</p>
-          <p>father_phone_number</p>
-          <p>father_address</p>
+          <p><%= @client_data.father_first_name %></p>
+          <p><%= @client_data.father_last_name %></p>
+          <p><%= @client_data.father_profession %></p>
+          <p><%= @client_data.father_phone_number %></p>
+          <p><%= @client_data.father_address %></p>
         </div>
       </div>
     </div>
@@ -175,11 +175,11 @@
           <i class="material-icons">edit</i>
         </h4>
         <div>
-          <p>mother_first_name</p>
-          <p>mother_last_name</p>
-          <p>mother_profession</p>
-          <p>mother_phone_number</p>
-          <p>mother_address</p>
+          <p><%= @client_data.mother_first_name %></p>
+          <p><%= @client_data.mother_last_name %></p>
+          <p><%= @client_data.mother_profession %></p>
+          <p><%= @client_data.mother_phone_number %></p>
+          <p><%= @client_data.mother_address %></p>
         </div>
       </div>
     </div>
@@ -195,10 +195,10 @@
           <i class="material-icons">edit</i>
         </h4>
         <div>
-          <p>beneficiary_number</p>
-          <p>insurance_name</p>
-          <p>insurance_address</p>
-          <p>insurance_policy</p>
+          <p><%= @client_data.beneficiary_number %></p>
+          <p><%= @client_data.insurance_name %></p>
+          <p><%= @client_data.insurance_address %></p>
+          <p><%= @client_data.insurance_policy %></p>
         </div>
       </div>
     </div>
@@ -208,9 +208,9 @@
           <i class="material-icons">edit</i>
         </h4>
         <div>
-          <p>first_name</p>
-          <p>last_name</p>
-          <p>birthday</p>
+          <p><%= @kid.first_name %></p>
+          <p><%= @kid.last_name %></p>
+          <p><%= @kid.birthday %></p>
         </div>
       </div>
     </div>
@@ -223,4 +223,3 @@
 </div>
 
 <%= link_to "Valider ma réservation", confirm_path(current_user.reservation), method: :patch, class: "btn btn-primary btn-lg" %>
-

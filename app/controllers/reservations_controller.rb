@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show]
-  before_action :set_reservation, only: [:edit, :update, :show, :confirm]
+  before_action :set_reservation, only: [:edit, :update, :confirm]
 
   def new
     @reservation = Reservation.new
@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    
+
     @week = WeeklySchedule.new(week_params)
     @week.reservation = @reservation
 
@@ -54,7 +54,10 @@ class ReservationsController < ApplicationController
   end
 
   def show
+    @reservation = current_user.reservation
     @week = @reservation.weekly_schedule
+    @client_data = current_user.client_datum
+    @kid = current_user.kids.first
   end
 
   def confirm
@@ -90,7 +93,7 @@ class ReservationsController < ApplicationController
     params.require(:reservation).permit(weekly_schedule_attributes: [:worker_monday_morning, :worker_monday_afternoon, :worker_tuesday_morning, :worker_tuesday_afternoon, :worker_wednesday_morning, :worker_wednesday_afternoon, :worker_thursday_morning, :worker_thursday_afternoon, :worker_friday_morning, :worker_friday_afternoon])
   end
 
-  def status_update
-    params.require(:confirm).permit(:status)
-  end
+  # def status_update
+  #   params.require(:confirm).permit(:status)
+  # end
 end
