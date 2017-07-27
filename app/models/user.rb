@@ -9,4 +9,8 @@ class User < ApplicationRecord
   has_many :kids, dependent: :destroy
   has_one :weekly_schedule, through: :reservation
   has_one :client_datum, dependent: :destroy
+
+  def name
+    email
+  end
 end

@@ -8,6 +8,8 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '5.0.4'
 gem 'redis'
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
