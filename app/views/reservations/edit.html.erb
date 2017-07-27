@@ -1,84 +1,145 @@
 <div class="container">
   <div class="row">
     <div class="col s12">
-      <h2 class="center-align">Réservation de votre semaine</h2>
+      <h2 class="center-align">Modification de votre semaine</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <div class="divider"></div>
-  <%= simple_form_for @reservation do |r| %>
-  <%= r.simple_fields_for :weekly_schedule do |w| %>
-  <div class="section">
-    <h4 class="center-align">Lundi</h4>
-    <div class="row center-align">
-      <div class="col s12 m6">
-        <%= w.input :worker_monday_morning, required: true %>
+<%= simple_form_for @reservation do |r| %>
+<div class="row">
+  <div class="col s12 m4 l2">
+    <div class="card-panel center">
+      <h4 class="center">Lundi</h4>
+    </div>
+    <div class="card-panel center">
+      <div class="input boolean required weekly_schedule_worker_monday_morning">
+        <input name="weekly_schedule[worker_monday_morning]" type="hidden" value="0"/>
+        <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_monday_morning]" id="weekly_schedule_worker_monday_morning"/>
+        <label class="boolean required" for="weekly_schedule_worker_monday_morning">
+          Lundi Matin
+        </label>
       </div>
-      <div class="col s12 m6">
-        <%= w.input :worker_monday_afternoon, required: true %>
+    </div>
+    <div class="card-panel center">
+      <div class="input boolean required weekly_schedule_worker_monday_afternoon">
+        <input name="weekly_schedule[worker_monday_afternoon]" type="hidden" value="0"/>
+        <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_monday_afternoon]" id="weekly_schedule_worker_monday_afternoon"/>
+        <label class="boolean required" for="weekly_schedule_worker_monday_afternoon">
+          Lundi Après-midi
+        </label>
       </div>
     </div>
   </div>
-  <div class="divider"></div>
-  <div class="section">
-    <h4 class="center-align">Mardi</h4>
-    <div class="row center-align">
-      <div class="col s12 m6">
-        <%= w.input :worker_tuesday_morning, required: true %>
-      </div>
-      <div class="col s12 m6">
-        <%= w.input :worker_tuesday_afternoon, required: true %>
-      </div>
+
+<div class="col s12 m4 l2">
+  <div class="card-panel center">
+    <h4 class="center">Mardi</h4>
+  </div>
+  <div class="card-panel center">
+    <div class="input boolean required weekly_schedule_worker_tuesday_morning center">
+      <input name="weekly_schedule[worker_tuesday_morning]" type="hidden" value="0"/>
+      <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_tuesday_morning]" id="weekly_schedule_worker_tuesday_morning"/>
+      <label class="boolean required" for="weekly_schedule_worker_tuesday_morning">
+        Mardi Matin
+      </label>
     </div>
   </div>
-  <div class="divider"></div>
-  <div class="section">
-    <h4 class="center-align">Mercredi</h4>
-    <div class="row center-align">
-      <div class="col s12 m6">
-        <%= w.input :worker_wednesday_morning, required: true %>
-      </div>
-      <div class="col s12 m6">
-        <%= w.input :worker_wednesday_afternoon, required: true %>
-      </div>
+  <div class="card-panel center">
+    <div class="input boolean required weekly_schedule_worker_tuesday_afternoon center">
+      <input name="weekly_schedule[worker_tuesday_afternoon]" type="hidden" value="0"/>
+      <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_tuesday_afternoon]" id="weekly_schedule_worker_tuesday_afternoon"/>
+      <label class="boolean required" for="weekly_schedule_worker_tuesday_afternoon">
+        Mardi Après-midi
+      </label>
     </div>
   </div>
-  <div class="divider"></div>
-  <div class="section">
-    <h4 class="center-align">Jeudi</h4>
-    <div class="row center-align">
-      <div class="col s12 m6">
-        <%= w.input :worker_thursday_morning, required: true %>
-      </div>
-      <div class="col s12 m6">
-        <%= w.input :worker_thursday_afternoon, required: true %>
-      </div>
+</div>
+
+<div class="col s12 m4 l2">
+  <div class="card-panel center">
+    <h4 class="center">Mercredi</h4>
+  </div>
+  <div class="card-panel center">
+    <div class="input boolean required weekly_schedule_worker_wednesday_morning center">
+      <input name="weekly_schedule[worker_wednesday_morning]" type="hidden" value="0"/>
+      <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_wednesday_morning]" id="weekly_schedule_worker_wednesday_morning"/>
+      <label class="boolean required" for="weekly_schedule_worker_wednesday_morning">
+        Mercredi Matin
+      </label>
     </div>
   </div>
-  <div class="divider"></div>
-  <div class="section">
-    <h4 class="center-align">Vendredi</h4>
-    <div class="row center-align">
-      <div class="col s12 m6">
-        <%= w.input :worker_friday_morning, required: true %>
-      </div>
-      <div class="col s12 m6">
-        <%= w.input :worker_friday_afternoon, required: true %>
-      </div>
+  <div class="card-panel center">
+    <div class="input boolean required weekly_schedule_worker_wednesday_afternoon center">
+      <input name="weekly_schedule[worker_wednesday_afternoon]" type="hidden" value="0"/>
+      <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_wednesday_afternoon]" id="weekly_schedule_worker_wednesday_afternoon"/>
+      <label class="boolean required" for="weekly_schedule_worker_wednesday_afternoon">
+        Mercredi Après-midi
+      </label>
     </div>
   </div>
-  <%= w.hidden_field :reservation_id, :value => @reservation.id %>
-  <% end %>
-  <div class="container center-align">
-    <div class="row">
-      <div class="col s12">
-        <%= r.input :number_of_weeks, required: true %>
-        <input type="submit" name= "commit" value="Enregistrer" class="btn btn-primary btn-lg" data-disable-with="Enregistrement">
-        <% end %>
-      </div>
+</div>
+
+<div class="col s12 m4 l2">
+  <div class="card-panel center">
+    <h4 class="center">Jeudi</h4>
+  </div>
+  <div class="card-panel center">
+    <div class="input boolean required weekly_schedule_worker_thursday_morning center">
+      <input name="weekly_schedule[worker_thursday_morning]" type="hidden" value="0"/>
+      <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_thursday_morning]" id="weekly_schedule_worker_thursday_morning"/>
+      <label class="boolean required" for="weekly_schedule_worker_thursday_morning">
+        Jeudi Matin
+      </label>
     </div>
   </div>
+  <div class="card-panel center">
+    <div class="input boolean required weekly_schedule_worker_thursday_afternoon center">
+      <input name="weekly_schedule[worker_thursday_afternoon]" type="hidden" value="0"/>
+      <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_thursday_afternoon]" id="weekly_schedule_worker_thursday_afternoon"/>
+      <label class="boolean required" for="weekly_schedule_worker_thursday_afternoon">
+        Jeudi Après-midi
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="col s12 m4 l2">
+  <div class="card-panel center">
+    <h4 class="center">Vendredi</h4>
+  </div>
+  <div class="card-panel center">
+    <div class="input boolean required weekly_schedule_worker_friday_morning center">
+      <input name="weekly_schedule[worker_friday_morning]" type="hidden" value="0"/>
+      <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_friday_morning]" id="weekly_schedule_worker_friday_morning"/>
+      <label class="boolean required" for="weekly_schedule_worker_friday_morning">
+        Vendredi Matin
+      </label>
+    </div>
+  </div>
+  <div class="card-panel center">
+    <div class="input boolean required weekly_schedule_worker_friday_afternoon center">
+      <input name="weekly_schedule[worker_friday_afternoon]" type="hidden" value="0"/>
+      <input class="boolean required" required="required" aria-required="true" type="checkbox" value="1" name="weekly_schedule[worker_friday_afternoon]" id="weekly_schedule_worker_friday_afternoon"/>
+      <label class="boolean required" for="weekly_schedule_worker_friday_afternoon">
+        Vendredi Après-midi
+      </label>
+    </div>
+  </div>
+</div>
+
+  <div class="col s12 m4 l2">
+  <div class="card-panel center">
+    <h4 class="center">Récurrence</h4>
+  </div>
+  <div class="card-panel center">
+    <%= r.input :number_of_weeks, required: true %>
+    <%= r.hidden_field :user_id, :value => current_user.id %>
+    <%= r.hidden_field :workplace_id, :value => Workplace.first.id %>
+    <%= r.button :submit, "Enregistrer", class: "btn btn-primary btn-lg" %>
+    <% end %>
+    </div>
+  </div>
+</div>
 </div>
