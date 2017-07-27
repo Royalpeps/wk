@@ -19,6 +19,12 @@ h1 {
 h2 {
   font-family: 'Gloria Hallelujah', cursive;
 }
+h3 {
+  background-color: $pink;
+  margin: 10px 0px 10px;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+}
 
 p {
   text-align: center;
@@ -31,7 +37,7 @@ body {
 }
 
 .parallax {
-  opacity: 0.55;
+  opacity: 0.75;
 }
 
 .grey.lighten-4 {
@@ -44,14 +50,20 @@ body {
 
 .text {
   font-size: 25px;
-  text-shadow: 2px 2px 2px $pink;
-
+}
+.text p {
+  color: white;
 }
 
 .page-cover h2 {
   padding-bottom: 50px;
 }
-
+#bouton {
+  padding-top: 30px;
+}
+#mapes {
+  background-color: $pink;
+}
 // body {
 //   background-color: #eeeeee;
 // }

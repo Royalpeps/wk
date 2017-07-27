@@ -9,6 +9,13 @@ gem 'puma'
 gem 'rails', '5.0.4'
 gem 'redis'
 
+gem "coffee-rails"
+gem "gmaps4rails"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-underscore"
+end
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
