@@ -1,52 +1,30 @@
 <nav>
   <div class="nav-wrapper">
-    <%= link_to root_path, class: "brand-logo center" do %>
+    <%= link_to root_path, class: "brand-logo left" do %>
     <%= image_tag "family.png", alt: "Logo" %>
     <% end %>
 
-    <!-- <% if current_user %>
-    <ul class="right hide-on-med-and-down">
-      <li><%= link_to dashboard_path do %>
-        <i class="material-icons", alt: "Dashboard"></i> Dashboard
-        <% end %>
-      </li>
-      <li><%= link_to destroy_user_session_path, method: :delete do %>
-        <i class="material-icons", alt: "Déconnexion"></i> Déconnexion
-        <% end %>
-      </li>
-    </ul>
-    <ul class="side-nav" id="mobile-demo">
-      <li><%= link_to dashboard_path do %>
-        <i class="material-icons", alt: "Dashboard"></i> Dashboard
-        <% end %>
-      </li>
-      <li><%= link_to destroy_user_session_path, method: :delete do %>
-        <i class="material-icons", alt: "Déconnexion"></i> Déconnexion
-        <% end %>
-      </li>
-    </ul>
-    <% else %>
-    <ul class="right hide-on-med-and-down">
-      <li><%= link_to new_user_session_path do %>
-        <i class="material-icons", alt: "Connexion"></i> Connexion
-        <% end %>
-      </li>
-      <li><%= link_to new_user_registration_path do %>
-        <i class="material-icons", alt: "Inscription"></i> Inscription
-        <% end %>
-      </li>
-    </ul>
-    <ul class="side-nav" id="mobile-demo">
-      <li><%= link_to new_user_session_path do %>
-        <i class="material-icons", alt: "Connexion"></i> Connexion
-        <% end %>
-      </li>
-      <li><%= link_to new_user_registration_path do %>
-        <i class="material-icons", alt: "Inscription"></i> Inscription
-        <% end %>
-      </li>
-    </ul>
-    <% end %> -->
+    <% if current_user %>
+      <ul class="right hide-on-med-and-down"></li>
+        <li><%= link_to "Dashboard", dashboard_path %></li>
+        <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
+      </ul>
+
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to "Dashboard", dashboard_path %></li>
+        <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
+      </ul>
+    <%else  %>
+      <ul class="right hide-on-med-and-down">
+        <li><%= link_to "Connexion", new_user_session_path %></li>
+        <li><%= link_to "Inscription", new_user_registration_path %></li>
+      </ul>
+
+      <ul class="side-nav" id="mobile-demo">
+        <li><%= link_to "Connexion", new_user_session_path %></li>
+        <li><%= link_to "Inscription", new_user_registration_path %></li>
+      </ul>
+    <% end %>
   </div>
 </nav>
 
@@ -58,3 +36,4 @@ $(document).ready(function() {
 });
 </script>
 <% end %>
+
