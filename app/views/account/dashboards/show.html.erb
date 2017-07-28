@@ -7,8 +7,8 @@
     <a href="#!name"><span class="white-text name">John Doe</span></a>
     <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
   </div></li>
+  <li><a href="#!"><i class="material-icons">insert_chart</i>Dashboard</a></li>
   <li><a href="#!"><i class="material-icons">person</i>Profil</a></li>
-  <li><a href="#!"></a></li>
 </ul>
 <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
@@ -17,28 +17,181 @@
 <div class="row">
   <div class="panel center">
     <h4>Vos réservations</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="col s12">
+      <p>Récapitulatif de ma semaine type :</p>
+      <div class="row">
+        <div class="col s12 m4 l2">
+          <div class="card-panel center z-depth-2">
+            <h4 class="center">Lundi</h4>
+          </div>
+          <% if @week.worker_monday_morning %>
+          <div class="card-panel center z-depth-2 card green lighten-2">
+              Matin
+          </div>
+          <% else %>
+          <div class="card-panel center z-depth-2">
+              Matin
+          </div>
+          <% end %>
+          <% if @week.worker_monday_afternoon %>
+          <div class="card-panel center z-depth-2 card green lighten-2">
+              Après-midi
+          </div>
+          <% else %>
+          <div class="card-panel center z-depth-2">
+              Après-midi
+          </div>
+          <% end %>
+        </div>
+
+      <div class="col s12 m4 l2">
+      <div class="card-panel center z-depth-2">
+        <h4 class="center">Mardi</h4>
+      </div>
+      <% if @week.worker_tuesday_morning %>
+      <div class="card-panel center z-depth-2 card green lighten-2">
+          Matin
+      </div>
+      <% else %>
+      <div class="card-panel center z-depth-2">
+          Matin
+      </div>
+      <% end %>
+      <% if @week.worker_tuesday_afternoon %>
+      <div class="card-panel center z-depth-2 card green lighten-2">
+          Après-midi
+      </div>
+      <% else %>
+      <div class="card-panel center z-depth-2">
+          Après-midi
+      </div>
+      <% end %>
+    </div>
+
+
+      <div class="col s12 m4 l2">
+      <div class="card-panel center z-depth-2">
+        <h4 class="center">Mercredi</h4>
+      </div>
+      <% if @week.worker_wednesday_morning %>
+      <div class="card-panel center z-depth-2 card green lighten-2">
+          Matin
+      </div>
+      <% else %>
+      <div class="card-panel center z-depth-2">
+          Matin
+      </div>
+      <% end %>
+      <% if @week.worker_wednesday_afternoon %>
+      <div class="card-panel center z-depth-2 card green lighten-2">
+          Après-midi
+      </div>
+      <% else %>
+      <div class="card-panel center z-depth-2">
+          Après-midi
+      </div>
+      <% end %>
+    </div>
+
+      <div class="col s12 m4 l2">
+      <div class="card-panel center z-depth-2">
+        <h4 class="center">Jeudi</h4>
+      </div>
+      <% if @week.worker_thursday_morning %>
+      <div class="card-panel center z-depth-2 card green lighten-2">
+          Matin
+      </div>
+      <% else %>
+      <div class="card-panel center z-depth-2">
+          Matin
+      </div>
+      <% end %>
+      <% if @week.worker_thursday_afternoon %>
+      <div class="card-panel center z-depth-2 card green lighten-2">
+          Après-midi
+      </div>
+      <% else %>
+      <div class="card-panel center z-depth-2">
+          Après-midi
+      </div>
+      <% end %>
+    </div>
+
+
+      <div class="col s12 m4 l2">
+      <div class="card-panel center z-depth-2">
+        <h4 class="center">Vendredi</h4>
+      </div>
+      <% if @week.worker_friday_morning %>
+      <div class="card-panel center z-depth-2 card green lighten-2">
+          Matin
+      </div>
+      <% else %>
+      <div class="card-panel center z-depth-2">
+          Matin
+      </div>
+      <% end %>
+      <% if @week.worker_friday_afternoon %>
+      <div class="card-panel center z-depth-2 card green lighten-2">
+          Après-midi
+      </div>
+      <% else %>
+      <div class="card-panel center z-depth-2">
+          Après-midi
+      </div>
+      <% end %>
+    </div>
+
+
+      <div class="col s12 m4 l2">
+      <div class="card-panel center z-depth-2">
+        <h4 class="center">Récurrence</h4>
+      </div>
+      <div class="card-panel center z-depth-2">
+        <p><%= @reservation.number_of_weeks %></p>
+      </div>
+    </div>
+
+    </div>
   </div>
 </div>
 
 <div class="row">
   <div class="panel center">
     <h4>Salle de réunion</h4>
-    <div class="col s12 m12">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="col s12 m6">
     <div class="card horizontal">
       <div class="card-image">
         <img src="https://lorempixel.com/100/190/business/6">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <div id="test-slider"></div>
+          <h5>Salle 1</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
         <div class="card-action">
-          <a href="#">Réserver une salle</a>
+          <a href="#">Réserver cette salle</a>
         </div>
       </div>
     </div>
   </div>
+  <div class="col s12 m6">
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="https://lorempixel.com/100/190/business/1">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <h5>Salle 2</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="card-action">
+        <a href="#">Réserver cette salle</a>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 </div>
 
@@ -52,6 +205,7 @@
         </div>
         <div class="card-stacked">
           <div class="card-content">
+            <h4>Massage bébé</h4>
             <p>I am a very simple card. I am good at containing small bits of information.</p>
           </div>
           <div class="card-action">
@@ -67,6 +221,7 @@
         </div>
         <div class="card-stacked">
           <div class="card-content">
+            <h4>Bien être avec bébé</h4>
             <p>I am a very simple card. I am good at containing small bits of information.</p>
           </div>
           <div class="card-action">
@@ -82,6 +237,7 @@
         </div>
         <div class="card-stacked">
           <div class="card-content">
+            <h4>Meetup : Ruby</h4>
             <p>I am a very simple card. I am good at containing small bits of information.</p>
           </div>
           <div class="card-action">

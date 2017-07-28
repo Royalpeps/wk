@@ -17,7 +17,7 @@
         <h4 class="center">Lundi</h4>
       </div>
       <% if @week.worker_monday_morning %>
-      <div class="card-panel center z-depth-2">
+      <div class="card-panel center z-depth-2 card green lighten-2">
           Matin
       </div>
       <% else %>
@@ -26,7 +26,7 @@
       </div>
       <% end %>
       <% if @week.worker_monday_afternoon %>
-      <div class="card-panel center z-depth-2">
+      <div class="card-panel center z-depth-2 card green lighten-2">
           Après-midi
       </div>
       <% else %>
@@ -41,7 +41,7 @@
     <h4 class="center">Mardi</h4>
   </div>
   <% if @week.worker_tuesday_morning %>
-  <div class="card-panel center z-depth-2">
+  <div class="card-panel center z-depth-2 card green lighten-2">
       Matin
   </div>
   <% else %>
@@ -50,7 +50,7 @@
   </div>
   <% end %>
   <% if @week.worker_tuesday_afternoon %>
-  <div class="card-panel center z-depth-2">
+  <div class="card-panel center z-depth-2 card green lighten-2">
       Après-midi
   </div>
   <% else %>
@@ -66,7 +66,7 @@
     <h4 class="center">Mercredi</h4>
   </div>
   <% if @week.worker_wednesday_morning %>
-  <div class="card-panel center z-depth-2">
+  <div class="card-panel center z-depth-2 card green lighten-2">
       Matin
   </div>
   <% else %>
@@ -75,7 +75,7 @@
   </div>
   <% end %>
   <% if @week.worker_wednesday_afternoon %>
-  <div class="card-panel center z-depth-2">
+  <div class="card-panel center z-depth-2 card green lighten-2">
       Après-midi
   </div>
   <% else %>
@@ -90,7 +90,7 @@
     <h4 class="center">Jeudi</h4>
   </div>
   <% if @week.worker_thursday_morning %>
-  <div class="card-panel center z-depth-2">
+  <div class="card-panel center z-depth-2 card green lighten-2">
       Matin
   </div>
   <% else %>
@@ -99,7 +99,7 @@
   </div>
   <% end %>
   <% if @week.worker_thursday_afternoon %>
-  <div class="card-panel center z-depth-2">
+  <div class="card-panel center z-depth-2 card green lighten-2">
       Après-midi
   </div>
   <% else %>
@@ -115,7 +115,7 @@
     <h4 class="center">Vendredi</h4>
   </div>
   <% if @week.worker_friday_morning %>
-  <div class="card-panel center z-depth-2">
+  <div class="card-panel center z-depth-2 card green lighten-2">
       Matin
   </div>
   <% else %>
@@ -124,7 +124,7 @@
   </div>
   <% end %>
   <% if @week.worker_friday_afternoon %>
-  <div class="card-panel center z-depth-2">
+  <div class="card-panel center z-depth-2 card green lighten-2">
       Après-midi
   </div>
   <% else %>
@@ -221,5 +221,6 @@
 </div>
 <div class="center"><a class="waves-effect waves-light btn" <%= link_to "Modifier mes informations", edit_client_datum_path(current_user.client_datum) %></a>
 </div>
-
-<%= link_to "Valider ma réservation", confirm_path(current_user.reservation), method: :patch, class: "btn btn-primary btn-lg" %>
+</div>
+<div class="center"><a class="waves-effect waves-light btn" <%= link_to "Valider ma réservation", confirm_path(current_user.reservation), method: :patch, class: "btn btn-primary btn-lg" %></a>
+</div>
