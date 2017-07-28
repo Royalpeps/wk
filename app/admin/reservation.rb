@@ -31,6 +31,6 @@ form do |f|
 end
   f.actions
 end
-
+  permit_params :status
 
 end
