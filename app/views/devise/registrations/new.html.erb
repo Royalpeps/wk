@@ -16,12 +16,14 @@
             <%= f.input :profile_pic_cache, as: :hidden %>
           </div>
 
-          <div class="form-actions">
+          <div class="form-actions center">
             <%= f.button :submit, "S'enregistrer" %>
-          </div>
-          <% end %>
+            <% end %>
 
-          <%= render "devise/shared/links" %>
+            <a class="waves-effect waves-light btn" <%= render "devise/shared/links" %></a>
+          </div>
+
+
         </div>
       </div>
     </div>
