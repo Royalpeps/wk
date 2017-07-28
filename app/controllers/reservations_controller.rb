@@ -64,7 +64,7 @@ class ReservationsController < ApplicationController
     @reservation.update(status: "Pending")
 
     if @reservation.save
-      redirect_to reservation_path(current_user.reservation)
+      redirect_to root_path
       flash[:notice] = "Réservation confirmée !"
     else
       flash[:alert] = "L'enregistrement n'a pas fonctionné, veuillez recommencer."

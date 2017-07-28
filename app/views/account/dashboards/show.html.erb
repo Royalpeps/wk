@@ -1,11 +1,8 @@
 <ul id="slide-out" class="side-nav">
   <li><div class="user-view">
-    <div class="background">
-      <img src="images/office.jpg">
-    </div>
-    <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-    <a href="#!name"><span class="white-text name">John Doe</span></a>
-    <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    <a href="#!user"><%= image_tag current_user.profile_pic, class:"circle" %></a>
+    <a href="#!name"><span class="name"><%= @client_datum.father_first_name %></span></a>
+    <a href="#!email"><span class="email"><%= current_user.email %></span></a>
   </div></li>
   <li><a href="#!"><i class="material-icons">insert_chart</i>Dashboard</a></li>
   <li><a href="#!"><i class="material-icons">person</i>Profil</a></li>

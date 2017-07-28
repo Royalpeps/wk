@@ -24,6 +24,13 @@ workplace = Workplace.create!({
 }
 )
 
+admin = User.create!({
+  email: 'admin@workplaceandkids.fr',
+  admin: true,
+  password: 'workplace',
+  remote_profile_pic_url: 'https://cdn2.iconfinder.com/data/icons/danger-problems/512/anonymous-512.png'
+  })
+
 hugo = User.create!({
   email: "hugodaniel@gmail.com",
   admin: false,
