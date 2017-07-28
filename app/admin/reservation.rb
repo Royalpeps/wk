@@ -12,4 +12,25 @@ ActiveAdmin.register Reservation do
 #   permitted
 # end
 
+index do
+  selectable_column
+  column :user
+  column :id
+  column :number_of_weeks
+  column :created_at
+  column :status
+  actions
+end
+
+form do |f|
+  f.inputs "Reservation" do
+  f.input :user
+  f.input :workplace
+  f.input :status, as: :select, collection: (["Acceptée", "Refusée"])
+  f.input :number_of_weeks
+end
+  f.actions
+end
+
+
 end
