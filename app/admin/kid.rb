@@ -13,4 +13,14 @@ ActiveAdmin.register Kid do
 #   permitted
 # end
 
+index do
+  selectable_column
+  column :user
+  column :id
+  column :first_name
+  column :last_name
+  column :birthday
+  actions
+end
+
 end
