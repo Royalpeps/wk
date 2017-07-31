@@ -5,21 +5,20 @@
         <div class="card-content">
           <div class="left-align">
             <h2 class="center-align">Connexion</h2>
+            <br></br>
             <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="form-inputs">
               <%= f.input :email, required: false, autofocus: true, wrapper_html: { class: 'input-field' } %>
               <%= f.input :password, required: false, wrapper_html: { class: 'input-field' } %>
               <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+              <br></br>
             </div>
           </div>
-
-          <div class="form-actions">
-           <%= f.button :submit, name: "commit", value: "Connexion" %>
-            <input type="submit" name= "commit" value="Connexion" class="btn btn-primary btn-lg" data-disable-with="Login">
-
+          <div class="form-actions center">
+            <input type="submit"  name= "commit" value="Connexion" class="btn btn-primary btn-lg" data-disable-with="Login">
           </div>
+          <br></br>
           <% end %>
-
           <%= render "devise/shared/links" %>
         </div>
       </div>
