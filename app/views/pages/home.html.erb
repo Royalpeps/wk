@@ -8,7 +8,7 @@
   <div class="row container">
     <h2 class="header center-align">Bienvenue</h2>
     <div class="center-align">
-      <p class="text-darken-3 lighten-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="text-darken-3 lighten-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
       <blockquote>
       <p class="text-darken-3 lighten-3">"Tous les pères revent de pouvoir travailler à coté de leurs enfants" J.C.</p>
       </blockquote>
@@ -37,31 +37,82 @@
       <p class="grey-text text-darken-3 lighten-3">Trois professionnels de la puériculture seront là pour encadrer les enfants.</p>
     </div>
   </div>
+  <div class="parallax-container">
+    <div id="map" style="width:100%;height:500px"></div>
+  </div>
+  <div class="section white grey lighten-4">
+    <div class="row container">
+      <div class="col s12 m12">
+        <h2 class="header center-align">Nous trouver</h2>
+        <p><i class="material-icons">my_location</i> 13, boulevard de la liberté - 44000 Nantes</p>
+        <p><i class="material-icons">phone</i> 02.40.33.77.89</p>
+      </div>
+      <div class="col s12 m12">
+        <h2 class="header center-align">Contact</h2>
+        <form action="#!">
 
-<h3>Nous trouver</h3>
-<div id="map" style="width:100%;height:400px;background:black"></div>
-<%= content_for(:after_js) do %>
-  <script>
-    $(document).ready(function(){
-      $('.parallax').parallax();
-    });
-  </script>
+  <div class="row">
+    <div class="col m6 s12">
+      <div class="input-field">
+        <i class="fa fa-user prefix"></i>
+        <input id="input_name" type="text" name="name">
+        <label for="input_name">Nom</label>
+      </div>
+    </div>
+    <div class="col m6 s12">
+      <div class="input-field">
+        <i class="fa fa-envelope prefix"></i>
+        <input id="input_email" type="email" name="email">
+        <label for="input_email">Email</label>
+      </div>
+    </div>
+  </div>
 
-  <script>
-    $(document).ready(function() {
-      var handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function() {
-        markers = handler.addMarkers(<%= raw @markers.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-        if (markers.length == 0) {
-          handler.getMap().setZoom(2);
-        } else if (markers.length == 1) {
-          handler.getMap().setZoom(14);
-        }
-      });
-    });
-  </script>
-<% end %>
+  <div class="input-field">
+    <i class="fa fa-tag prefix"></i>
+    <input id="input_username" type="text" name="subject">
+    <label for="input_username">Sujet</label>
+  </div>
+
+  <div class="input-field">
+    <i class="fa fa-comment prefix"></i>
+    <textarea id="textarea-message" class="materialize-textarea" name="message"></textarea>
+    <label for="textarea-message">Message</label>
+  </div>
+
+  <p class="center">
+    <input type="checkbox" id="checkbox_copy" name="send_copy" />
+    <label for="checkbox_copy">M'envoyer une copie de mon message</label>
+    <button class="waves-effect btn">Envoyer message</button>
+  </p>
+</form>
+      </div>
+    </div>
+  </div>
 
 
+
+ <%= content_for(:after_js) do %>
+   <script>
+     $(document).ready(function(){
+       $('.parallax').parallax();
+     });
+   </script>
+
+   <script>
+     $(document).ready(function() {
+       var handler = Gmaps.build('Google');
+       handler.buildMap({provider: { scrollwheel: false, zoomControl: false }, internal: { id: 'map' } }, function() {
+         markers = handler.addMarkers(<%= raw @markers.to_json %>);
+         handler.bounds.extendWith(markers);
+         handler.fitMapToBounds();
+         if (markers.length == 0) {
+           handler.getMap().setZoom(8);
+         } else if (markers.length == 1) {
+           handler.getMap().setZoom(15);
+         }
+       });
+     });
+
+   </script>
+ <% end %>
