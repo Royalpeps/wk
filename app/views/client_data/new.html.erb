@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col s12">
       <h2 class="center-align">Veuillez entrer vos informations personnelles</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Merci de remplir tous les champs pour faciliter votre inscription et celle de votre enfant.</p>
     </div>
   </div>
 </div>
@@ -14,7 +14,7 @@
         <%= simple_form_for(@client_datum) do |f| %>
         <%= f.error_notification %>
         <h4 class="center-align">Père
-          <i class="material-icons">edit</i>
+          <i class="material-icons">face</i>
         </h4>
         <div class="input-field">
           <%= f.input :father_first_name, required: true, autofocus: true %>
@@ -28,7 +28,7 @@
     <div class="col s12 m6">
       <div class="card-panel z-depth-2">
         <h4 class="center-align">Mère
-          <i class="material-icons">edit</i>
+          <i class="material-icons">face</i>
         </h4>
         <div class="input-field">
           <%= f.input :mother_first_name, required: true, autofocus: true %>
@@ -42,7 +42,7 @@
     <div class="col s12">
       <div class="card-panel z-depth-2">
         <h4 class="center-align">Informations administratives
-          <i class="material-icons">edit</i>
+          <i class="material-icons">assignment_ind</i>
         </h4>
         <div class="input-field">
           <%= f.input :beneficiary_number, required: true, autofocus: true %>
@@ -56,13 +56,12 @@
     <div class="col s12">
       <div class="card-panel z-depth-2">
         <h4 class="center-align">Informations de mon enfant
-          <i class="material-icons">edit</i>
+          <i class="material-icons">face</i>
         </h4>
         <div class="input-field">
           <div class="string required kid_first_name">
             <div class="input-field">
               <label class="string required" for="kid_first_name">
-                <abbr title="required">*</abbr>
                 First name
               </label>
               <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[first_name]" id="kid_first_name" />
@@ -71,7 +70,6 @@
           <div class="string required kid_last_name">
             <div class="input-field">
               <label class="string required" for="kid_last_name">
-                <abbr title="required">*</abbr>
                 Last name
               </label>
               <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[last_name]" id="kid_last_name" />
@@ -80,10 +78,9 @@
           <div class="string required kid_birthday">
             <div class="input-field">
               <label class="string required" for="kid_birthday">
-                <abbr title="required">*</abbr>
                 Birthday
               </label>
-              <input class="string required" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[birthday]" id="kid_birthday" />
+              <input class="datepicker" autofocus="autofocus" required="required" aria-required="true" type="date" name="kid[birthday]" id="kid_birthday" />
             </div>
           </div>
         </div>
@@ -92,7 +89,7 @@
     <div class="container center-align">
       <div class="row">
         <div class="col s12">
-          <input type="submit" name= "commit" value="Enregistrer" class="btn btn-primary btn-lg" data-disable-with="Enregistrement">
+            <input type="submit" name= "commit" value="Enregistrer" class="btn btn-primary btn-lg" style="margin:30px;" data-disable-with="Enregistrement">
           <% end %>
         </div>
       </div>
