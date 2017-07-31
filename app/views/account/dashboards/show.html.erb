@@ -7,15 +7,21 @@
   <li><a href="#!"><i class="material-icons">insert_chart</i>Dashboard</a></li>
   <li><a href="#!"><i class="material-icons">person</i>Profil</a></li>
 </ul>
-<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="margin:30px;">menu</i></a>
+
+
 
 <div class="panel center">
-  <div class="col s12">
+  <div class="col s12 m6 l12">
     <h4>Mon emploi du temps sur
       <%= @reservation.number_of_weeks %>
-      semaines <a class="btn-floating btn-large green"><i class="material-icons">mode_edit</i></a></h4>
+      semaines
+      <a class="btn-floating btn green">
+        <i class="material-icons">mode_edit</i>
+      </a>
+    </h4>
     <div class="row">
-      <div class="col s12 m4 l2 offset-l1">
+      <div class="col s12 m3 l2 offset-l1 offset-m1">
         <div class="">
           <h4 class="center">Lundi</h4>
         </div>
@@ -39,7 +45,7 @@
         <% end %>
       </div>
 
-      <div class="col s12 m4 l2">
+      <div class="col s12 m3 l2">
         <div class="">
           <h4 class="center">Mardi</h4>
         </div>
@@ -63,7 +69,7 @@
         <% end %>
       </div>
 
-      <div class="col s12 m4 l2">
+      <div class="col s12 m3 l2">
         <div class="">
           <h4 class="center">Mercredi</h4>
         </div>
@@ -87,7 +93,7 @@
         <% end %>
       </div>
 
-      <div class="col s12 m4 l2">
+      <div class="col s12 m3 l2 offset-m3">
         <div class="">
           <h4 class="center">Jeudi</h4>
         </div>
@@ -111,7 +117,7 @@
         <% end %>
       </div>
 
-      <div class="col s12 m4 l2">
+      <div class="col s12 m3 l2">
         <div class="">
           <h4 class="center">Vendredi</h4>
         </div>
@@ -135,6 +141,157 @@
         <% end %>
       </div>
 
+<div class="container">
+  <div class="panel">
+    <div class="col s12">
+      <h4 class="center">Salle de réunion</h4>
+    </div>
+    <div class="col s12">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/business/6">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <h5>Réunion 1</h5>
+          </div>
+          <div class="card-action">
+            <a href="#">Réserver cette salle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="https://lorempixel.com/100/190/business/1">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <h5>Réunion 2</h5>
+          </div>
+          <div class="card-action">
+            <a href="#">Réserver cette salle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col s12">
+    <h4 class="center">Evènements</h4>
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header">
+          <i class="mdi-image-filter-drama"></i>Cette semaine</div>
+        <div class="collapsible-body">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/6">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5 class="center">Massage bébé</h5>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action center">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/5">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5 class="center">Bien être avec bébé</h5>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action center">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="mdi-maps-place"></i>Semaine prochaine</div>
+        <div class="collapsible-body">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/2">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5 class="center">Meetup : Ruby</h5>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action center">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="mdi-social-whatshot"></i>Dans le mois</div>
+        <div class="collapsible-body">
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/6">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5 class="center">Massage bébé</h5>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action center">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/5">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5 class="center">Bien être avec bébé</h5>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action center">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+          <div class="card horizontal">
+            <div class="card-image">
+              <img src="https://lorempixel.com/100/190/nature/2">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <h5 class="center">Meetup : Ruby</h5>
+                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              </div>
+              <div class="card-action  center">
+                <a href="#">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
       <!-- <div class="col s12">
           <h4 class="center">Nombre de semaine</h4>
           <p><%= @reservation.number_of_weeks %></p>
@@ -150,7 +307,31 @@
 </div>
 </div>
 
-<div class="container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
   <div class="row">
     <div class="col s12 m4">
       <div class="card-panel stats-card blue blue-text text-lighten-5">
@@ -185,153 +366,4 @@
       </div>
     </div>
   </div>
-</div>
-
-
-<div class="container">
-  <div class="row">
-    <div class="panel center">
-      <h4>Salle de réunion</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <div class="col s12 m6">
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://lorempixel.com/100/190/business/6">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5>Réunion 1</h5>
-            </div>
-            <div class="card-action">
-              <a href="#">Réserver cette salle</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m6">
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://lorempixel.com/100/190/business/1">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h5>Réunion 2</h5>
-            </div>
-            <div class="card-action">
-              <a href="#">Réserver cette salle</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container">
-  <h4 class="center">Evènements</h4>
-  <ul class="collapsible" data-collapsible="accordion">
-    <li>
-      <div class="collapsible-header">
-        <i class="mdi-image-filter-drama"></i>Cette semaine</div>
-      <div class="collapsible-body">
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://lorempixel.com/100/190/nature/6">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h4 class="center">Massage bébé</h4>
-              <p>I am a very simple card. I am good at containing small bits of information.</p>
-            </div>
-            <div class="card-action center">
-              <a href="#">Découvrir</a>
-            </div>
-          </div>
-        </div>
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://lorempixel.com/100/190/nature/5">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h4 class="center">Bien être avec bébé</h4>
-              <p>I am a very simple card. I am good at containing small bits of information.</p>
-            </div>
-            <div class="card-action center">
-              <a href="#">Découvrir</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header">
-        <i class="mdi-maps-place"></i>Semaine prochaine</div>
-      <div class="collapsible-body">
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://lorempixel.com/100/190/nature/2">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h4 class="center">Meetup : Ruby</h4>
-              <p>I am a very simple card. I am good at containing small bits of information.</p>
-            </div>
-            <div class="card-action center">
-              <a href="#">Découvrir</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header">
-        <i class="mdi-social-whatshot"></i>Dans le mois</div>
-      <div class="collapsible-body">
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://lorempixel.com/100/190/nature/6">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h4 class="center">Massage bébé</h4>
-              <p>I am a very simple card. I am good at containing small bits of information.</p>
-            </div>
-            <div class="card-action center">
-              <a href="#">Découvrir</a>
-            </div>
-          </div>
-        </div>
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://lorempixel.com/100/190/nature/5">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h4 class="center">Bien être avec bébé</h4>
-              <p>I am a very simple card. I am good at containing small bits of information.</p>
-            </div>
-            <div class="card-action center">
-              <a href="#">Découvrir</a>
-            </div>
-          </div>
-        </div>
-        <div class="card horizontal">
-          <div class="card-image">
-            <img src="https://lorempixel.com/100/190/nature/2">
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <h4 class="center">Meetup : Ruby</h4>
-              <p>I am a very simple card. I am good at containing small bits of information.</p>
-            </div>
-            <div class="card-action  center">
-              <a href="#">Découvrir</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
+</div> -->

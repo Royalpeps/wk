@@ -23,3 +23,17 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+#btn-expanded {
+  float: none;
+  display: block;
+
+}
+html{
+  height: 100%;
+}
+
+body{
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 70px;
+}
