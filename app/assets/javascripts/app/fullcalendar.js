@@ -27,6 +27,6 @@ $(document).ready(function() {
     },
     events: '/account/dashboard.json',
     height: 675,
-    locale: "fr"
+    locale: 'fr'
   })
 });
