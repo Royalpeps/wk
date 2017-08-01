@@ -1,34 +1,36 @@
 <div class="container">
-  <div class="row valign-wrapper">
-    <div class="col s6 offset-s3 valign">
-      <div class="card">
-        <div class="card-content">
-          <h2 class="center-align">Inscription</h2>
+  <div class="row">
+    <div class="col s5 offset-s4 center-align">
+      <div class="my-box valign-wrapper">
+        <div class="card">
+          <div class="card-content">
+            <h2 class="center-align">Inscription</h2>
 
-          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= f.error_notification %>
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
 
-          <div class="form-inputs">
-            <%= f.input :email, required: true, autofocus: true, wrapper_html: { class: 'input-field' }  %>
-            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} charactères minimum" if @minimum_password_length), wrapper_html: { class: 'input-field' }  %>
-            <%= f.input :password_confirmation, required: true, wrapper_html: { class: 'input-field' }  %>
-            <div class="file-field input-field file optional user_profile_pic">
-              <div class="btn" id="btn-expanded">
-                <span><%= icon 'upload' %> Votre photo</span>
-                <input class="file optional" type="file" name="user[profile_pic]" id="user_profile_pic">
+            <div class="form-inputs">
+              <%= f.input :email, required: true, autofocus: true, wrapper_html: { class: 'input-field' }  %>
+              <%= f.input :password, required: true, hint: ("#{@minimum_password_length} charactères minimum" if @minimum_password_length), wrapper_html: { class: 'input-field' }  %>
+              <%= f.input :password_confirmation, required: true, wrapper_html: { class: 'input-field' }  %>
+              <div class="file-field input-field file optional user_profile_pic">
+                <div class="btn" id="btn-expanded">
+                  <span><%= icon 'upload' %> Votre photo</span>
+                  <input class="file optional" type="file" name="user[profile_pic]" id="user_profile_pic">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate file optional" type="text" name="zz" id="user_profile_pic">
+                </div>
               </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate file optional" type="text" name="zz" id="user_profile_pic">
-              </div>
+              <%= f.input :profile_pic_cache, as: :hidden %>
             </div>
-            <%= f.input :profile_pic_cache, as: :hidden %>
-          </div>
 
-          <div class="form-actions center">
-           <%= f.button :submit, "Inscription" %>
-          <% end %>
-          <!-- <a class="waves-effect waves-light btn" <%= render "devise/shared/links" %> </a>  --></div>
-       </div>
+            <div class="form-actions center">
+             <%= f.button :submit, "Inscription" %>
+            <% end %>
+            <!-- <a class="waves-effect waves-light btn" <%= render "devise/shared/links" %> </a>  --></div>
+         </div>
+        </div>
       </div>
     </div>
   </div>
