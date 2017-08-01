@@ -6,3 +6,6 @@
 //= require gmaps/google
 
 //= require_tree ./app
+
+//= require moment
+//= require fullcalendar
