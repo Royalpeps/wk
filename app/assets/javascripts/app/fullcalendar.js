@@ -24,7 +24,7 @@ $(document).ready(function() {
       next:     '>',
     },
     events: '/account/dashboard.json',
-    height: 675,
+    height: 682,
     locale: 'fr'
   })
 });

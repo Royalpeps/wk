@@ -1,5 +1,5 @@
 #calendar{
-  table, thead, tbody, tfoot, tr, th, td{
+  table, thead, tbody, tfoot, th, td{
     border: none;
   }
   td {
@@ -10,9 +10,16 @@
     display: none;
   }
 
-  .fc-right {
+  .fc-right, .fc-center {
     display: none;
   }
+
+  tr {
+  border-bottom: 1px solid #eaeaea;
+  &:nth-child(11){
+    border-bottom: 1px solid #ababab;
+  }
+}
 
   .fc-header-toolbar{
     .fc-center{
