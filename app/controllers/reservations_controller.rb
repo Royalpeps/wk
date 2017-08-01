@@ -65,7 +65,7 @@ class ReservationsController < ApplicationController
 
     if @reservation.save
       redirect_to root_path
-      flash[:notice] = "Réservation confirmée !"
+      flash[:notice] = "Demande de réservation confirmée !"
     else
       flash[:alert] = "L'enregistrement n'a pas fonctionné, veuillez recommencer."
     end
