@@ -2,17 +2,14 @@
   <div class="parallax-container">
     <div class="parallax"><%= image_tag "banner.jpg", alt: "Banner" %></div>
     <h1 class="center-align" id="first-head">WorkPlace&kids</h1>
-    <p class="text"> Plus que <%= 20 - User.count %> places disponibles </p>
     <p class="text" id="bouton"><%= link_to "Réservez dès maintenant !", new_reservation_path, class: "waves-effect waves-light btn text" %></p>
   </div>
 </div>
   <div class="row container">
     <h2 class="header center-align">Bienvenue</h2>
     <div class="center-align">
-      <p class="text-darken-3 lighten-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-      <blockquote>
-      <p class="text-darken-3 lighten-3">"Tous les pères revent de pouvoir travailler à coté de leurs enfants" J.C.</p>
-      </blockquote>
+      <p class="text-darken-3 lighten-3">WorkPlace & Kids ces l'association d'un espace de coworking avec une micro-crèche pour permettre aux parents de concilier vie familiale, vie sociale et vie professionnelle.</p>
+      <p class="count">Mais dépêchez-vous, il ne reste plus que <%= 20 - User.count %> places disponibles !</p>
     </div>
   </div>
   <div class="parallax-container">
@@ -33,8 +30,7 @@
     <div class="row container">
       <h2 class="header center-align">Micro-crèche</h2>
       <p class="grey-text text-darken-3 lighten-3">La micro-crèche a des capacités moindres qu’une structure collective. Celle-ci pourra accueillir un
-        <strong>maximum de 10 enfants</strong>
-        de moins de 5 ans.</p>
+        <strong>maximum de 10 enfants</strong> de moins de 3 ans.</p>
       <p class="grey-text text-darken-3 lighten-3">Trois professionnels de la puériculture seront là pour encadrer les enfants.</p>
     </div>
   </div>
