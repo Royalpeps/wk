@@ -205,7 +205,8 @@ rhugo = Reservation.create!({
   number_of_weeks: 10,
   user: hugo,
   workplace: workplace,
-  starting_day: Date.today
+  starting_day: Date.today,
+  status: "Acceptée"
 }
 )
 
@@ -213,7 +214,8 @@ rvincent = Reservation.create!({
   number_of_weeks: 8,
   user: vincent,
   workplace: workplace,
-  starting_day: Date.today + 1.week
+  starting_day: Date.today + 1.week,
+  status: "Acceptée"
 }
 )
 
@@ -221,7 +223,8 @@ rthomas = Reservation.create!({
   number_of_weeks: 15,
   user: thomas,
   workplace: workplace,
-  starting_day: Date.today + 1.week
+  starting_day: Date.today + 1.week,
+  status: "Pending"
 }
 )
 
@@ -229,7 +232,8 @@ rgus = Reservation.create!({
   number_of_weeks: 11,
   user: gus,
   workplace: workplace,
-  starting_day: Date.today + 1.week
+  starting_day: Date.today + 1.week,
+  status: "Pending"
 }
 )
 
@@ -237,7 +241,8 @@ rconstantin = Reservation.create!({
   number_of_weeks: 16,
   user: constantin,
   workplace: workplace,
-  starting_day: Date.today + 1.week
+  starting_day: Date.today + 1.week,
+  status: "Acceptée"
 }
 )
 
