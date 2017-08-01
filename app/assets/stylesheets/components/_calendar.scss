@@ -1,0 +1,53 @@
+#calendar{
+  table, thead, tbody, tfoot, tr, th, td{
+    border: none;
+  }
+  td {
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .fc-today-button {
+    display: none;
+  }
+
+  .fc-right {
+    display: none;
+  }
+
+  .fc-header-toolbar{
+    .fc-center{
+      h2{
+        // font-family: $header-font;
+      }
+    }
+  }
+  .fc-event-container{
+    .fc-event{
+      background-color: #81C784;
+      border: none;
+      box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+                  0px 1px 10px 0px rgba(0, 0, 0, 0.12),
+                  0px 2px 4px -1px rgba(0, 0, 0, 0.3);
+    }
+  }
+  hr, .fc-content, .fc-divider{
+    display: none !important;
+  }
+}
+
+.fc-prev-button, .fc-next-button {
+   background-color: $pink; /* Green */
+   border: none;
+   border-radius: 2px;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin-left: 10px;
+}
+
+.fc-button-group {
+  padding: 10px;
+}
