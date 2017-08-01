@@ -9,3 +9,4 @@
 
 //= require moment
 //= require fullcalendar
+//= require fullcalendar/lang/fr

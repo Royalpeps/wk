@@ -26,6 +26,7 @@ $(document).ready(function() {
       nextYear: 'right-double-arrow'
     },
     events: '/account/dashboard.json',
-    height: 675
+    height: 675,
+    locale: "fr"
   })
 });
