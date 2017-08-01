@@ -8,7 +8,7 @@ $(document).ready(function() {
     handleWindowResize: true,
     weekends: false, // Hide weekends
     defaultView: 'agendaWeek', // Only show week view
-    minTime: '08:00:00', // Start time for the calendar
+    minTime: '07:30:00', // Start time for the calendar
     maxTime: '19:00:00', // End time for the calendar
     theme: true,
     weekends: false,
@@ -19,11 +19,9 @@ $(document).ready(function() {
       center: 'title',
       right: 'month,agendaWeek,agendaDay'
     },
-    buttonIcons: {
-      prev: 'left-single-arrow',
-      next: 'right-single-arrow',
-      prevYear: 'left-double-arrow',
-      nextYear: 'right-double-arrow'
+    buttonText: {
+      prev:     '<',
+      next:     '>',
     },
     events: '/account/dashboard.json',
     height: 675,
