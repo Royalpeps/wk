@@ -131,8 +131,8 @@
     </div>
     <p class="center">La date de début doit être un lundi.</p>
     <div class="card-panel center z-depth-2">
-      <%= r.input :starting_day, type: "text", class: "datepicker" %>
-        # <input type="text" class="datepicker" "data-date-start-date": "+1d" placeholder="Choisissez une date de début" name="starting_day" id="starting_day">
+      <input name="reservation[starting_day]" type="hidden"/>
+      <input type="text" class="datepicker" placeholder="Choisissez une date de début" name="reservation[starting_day]" id="reservation_starting_day"/>
     </div>
     <div class="center">
       <div style="margin:30px;">
