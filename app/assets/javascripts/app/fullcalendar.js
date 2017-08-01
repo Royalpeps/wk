@@ -27,6 +27,10 @@ $(document).ready(function() {
     },
     events: '/account/dashboard.json',
     height: 675,
+<<<<<<< HEAD
     locale: 'fr'
+=======
+    locale: "fr"
+>>>>>>> 7ee73f628e88dffae9aa1255567984cbb4d2008c
   })
 });
