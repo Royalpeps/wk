@@ -1,4 +1,50 @@
-<nav>
+<nav class="nav-extended">
+  <div class="nav-wrapper">
+      <a href="#" class="brand-logo"></a>
+      <%= link_to root_path, class: "brand-logo left" do %>
+      <%= image_tag "logo.png", alt: "Logo", id:"imagelogo" %>
+      <% end %>
+      <% if current_user %>
+        <ul class="right hide-on-med-and-down" id="right-link">
+          <% if current_user.admin %>
+          <li><%= link_to "Admin", rails_admin_path %></li>
+          <% end %>
+          <% if current_user.reservation %>
+          <% if current_user.reservation.status == "Acceptée" %>
+          <li><%= link_to "Dashboard", dashboard_path %></li>
+          <% end %>
+          <% end %>
+          <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <% if current_user.reservation %>
+          <% if current_user.reservation.status == "Acceptée" %>
+          <li><%= link_to "Dashboard", dashboard_path %></li>
+          <% end %>
+          <% end %>
+          <li><%= link_to "Déconnexion", destroy_user_session_path, method: :delete %></li>
+        </ul>
+      <%else  %>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down" id="right-link">
+          <li><%= link_to "Connexion", new_user_session_path %></li>
+          <li><%= link_to "Inscription", new_user_registration_path %></li>
+        </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+          <li><%= link_to "Connexion", new_user_session_path %></li>
+          <li><%= link_to "Inscription", new_user_registration_path %></li>
+        </ul>
+      <% end %>
+    </div>
+  </nav>
+
+
+
+
+
+
+<!-- <nav>
   <div class="nav-wrapper">
     <div class="logotext">
       <%= link_to root_path, class: "brand-logo left" do %>
@@ -38,7 +84,7 @@
         </ul>
       <% end %>
   </div>
-</nav>
+</nav> -->
 
 
 <%= content_for(:after_js) do %>
