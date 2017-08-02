@@ -65,7 +65,7 @@ class ReservationsController < ApplicationController
 
     if @reservation.save
       redirect_to root_path
-      flash[:notice] = "Votre demande de réservation a bien été prise en compte, vous recevez un mail de confirmation sous 48h."
+      flash[:notice] = "Votre demande de réservation a bien été prise en compte, vous recevrez un mail de confirmation sous 48h."
     else
       flash[:alert] = "L'enregistrement n'a pas fonctionné, veuillez recommencer."
     end
