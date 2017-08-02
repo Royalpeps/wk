@@ -1,12 +1,17 @@
 /* Card design */
 .cards {
-  height: 200px;
+  height: 150px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   color: white;
   position: relative;
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+.color {
+  background-color: #ee6e73;
+  border-radius: 3px;
 }
 .card-user {
   position: absolute;
