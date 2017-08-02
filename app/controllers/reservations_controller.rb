@@ -82,11 +82,11 @@ class ReservationsController < ApplicationController
   end
 
   def reservation_params
-    params.require(:reservation).permit(:user_id, :workplace_id, :number_of_weeks)
+    params.require(:reservation).permit(:user_id, :workplace_id, :number_of_weeks, :starting_day)
   end
 
   def reservation_update_params
-    params.require(:reservation).permit(:number_of_weeks, :status)
+    params.require(:reservation).permit(:number_of_weeks, :status, :starting_day)
   end
 
   def week_update_params

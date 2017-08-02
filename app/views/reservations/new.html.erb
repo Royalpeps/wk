@@ -132,10 +132,13 @@
       <%= r.hidden_field :workplace_id, :value => Workplace.first.id %>
     </div>
     <p class="center">La date de début doit être un lundi.</p>
-    <div class="card-panel center z-depth-2">
-      <input name="reservation[starting_day]" type="hidden"/>
-      <input type="text" class="datepicker" placeholder="Choisissez une date de début" name="reservation[starting_day]" id="reservation_starting_day"/>
-    </div>
+      <div class="card-panel center z-depth-2">
+        <div class="date optional reservation_starting_day">
+          <input type="text" id="reservation_starting_day" name="reservation[starting_day]" class="datepicker date optional" />
+        </div>
+      </div>
+      <!-- <input name="reservation[starting_day]" type="hidden"/>
+      <input type="text" class="datepicker" placeholder="Choisissez une date de début" name="reservation[starting_day]" id="reservation_starting_day"/> -->
     <div class="center">
       <div style="margin:30px;">
         <%= r.button :submit, "Enregistrer", class: "btn btn-primary btn-lg"%>
