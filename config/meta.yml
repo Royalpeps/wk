@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "WorkPlace & Kids"
+meta_title: "WorkPlace & Kids - Coworking & Micro-crèche"
+meta_description: "WorkPlace & Kids ces l'association d'un espace de coworking avec une micro-crèche pour permettre aux parents de concilier vie familiale, vie sociale et vie professionnelle."
+meta_image: "cover.jpg"                       # should exist in `app/assets/images/`
+twitter_account: "@thomasperouze"   # required for Twitter Cards
