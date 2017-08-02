@@ -1,3 +1,5 @@
+<% content_for :title, "W&K - Modification de votre semaine" %>
+
 <div class="container">
   <div class="row">
     <div class="col s12">
@@ -73,12 +75,18 @@
   <div class="col s12 m6 offset-m3 offset-l3">
     <h4 class="center">Durée</h4>
     <p class="center">Vous pouvez répéter votre semaine type sur plusieurs semaines, veuillez rentrer votre choix.</p>
-    <div class="card-panel center">
+    <div class="card-panel center z-depth-2">
       <%end%>
       <%= r.input :number_of_weeks, required: true %>
       <%= r.hidden_field :user_id, :value => current_user.id %>
       <%= r.hidden_field :workplace_id, :value => Workplace.first.id %>
     </div>
+    <p class="center">La date de début doit être un lundi.</p>
+      <div class="card-panel center z-depth-2">
+        <div class="date optional reservation_starting_day">
+          <input type="text" id="reservation_starting_day" name="reservation[starting_day]" class="datepicker date optional" />
+        </div>
+      </div>
     <div class="center">
       <div style="margin:30px;">
         <%= r.button :submit, "Enregistrer", class: "btn btn-primary btn-lg" %>
@@ -88,3 +96,16 @@
   </div>
 </div>
 </div>
+
+<%= content_for(:after_js) do %>
+<script type="text/javascript">
+$('.datepicker').pickadate({
+  selectMonths: true, // Creates a dropdown to control month
+  selectYears: 15, // Creates a dropdown of 15 years to control year,
+  today: 'Today',
+  clear: 'Clear',
+  close: 'Ok',
+  closeOnSelect: false // Close upon selecting a date,
+});
+</script>
+<% end %>

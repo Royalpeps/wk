@@ -14,13 +14,13 @@ class Account::DashboardsController < ApplicationController
     for i in 0...@reservation.number_of_weeks do
       @mornings.each_with_index do |morning, index|
         if morning
-          @events << { start: Time.new(@reservation.starting_day.year, @reservation.starting_day.month, @reservation.starting_day.day, 8, 0) + index.day + i.week, end: Time.new(@reservation.starting_day.year, @reservation.starting_day.month, @reservation.starting_day.day, 13, 0) + index.day  + i.week }
+          @events << { title: "Présence de 8:00 à 13:00", start: Time.new(@reservation.starting_day.year, @reservation.starting_day.month, @reservation.starting_day.day, 8, 0) + index.day + i.week, end: Time.new(@reservation.starting_day.year, @reservation.starting_day.month, @reservation.starting_day.day, 13, 0) + index.day  + i.week }
         end
       end
 
       @afternoons.each_with_index do |afternoon, index|
         if afternoon
-          @events << { start: Time.new(@reservation.starting_day.year, @reservation.starting_day.month, @reservation.starting_day.day, 14, 0) + index.day  + i.week, end: Time.new(@reservation.starting_day.year, @reservation.starting_day.month, @reservation.starting_day.day, 19, 0) + index.day  + i.week }
+          @events << { title: "Présence de 14:00 à 19:00", start: Time.new(@reservation.starting_day.year, @reservation.starting_day.month, @reservation.starting_day.day, 14, 0) + index.day  + i.week, end: Time.new(@reservation.starting_day.year, @reservation.starting_day.month, @reservation.starting_day.day, 19, 0) + index.day  + i.week }
         end
       end
     end
