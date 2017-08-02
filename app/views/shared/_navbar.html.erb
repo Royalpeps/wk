@@ -26,7 +26,7 @@
         </ul>
       <%else  %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down" id="right-link">
+        <ul class="right hide-on-med-and-down">
           <li><%= link_to "Connexion", new_user_session_path %></li>
           <li><%= link_to "Inscription", new_user_registration_path %></li>
         </ul>
@@ -94,3 +94,4 @@ $(document).ready(function() {
 });
 </script>
 <% end %>
+<script>$(".button-collapse").sideNav();</script>

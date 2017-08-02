@@ -1,6 +1,17 @@
 .nav-wrapper {
   padding-left: 40px;
+  background-color: $pink;
+
 }
 #right-link {
-  padding-right: 40px;
+  text-align:right;
+}
+#imagelogo {
+  border-radius: 100%;
+  padding: 5px;
+  width: 90%;
+  // padding-top
+}
+.button-collapse {
+  padding-left: 15px;
 }
