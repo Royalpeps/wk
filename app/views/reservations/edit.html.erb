@@ -2,85 +2,88 @@
   <div class="row">
     <div class="col s12">
       <h2 class="center-align">Modification de votre semaine</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Vous pouvez modifier votre sélection.</p>
     </div>
   </div>
 </div>
 
 <%= simple_form_for @reservation do |r| %>
- <%= r.simple_fields_for :weekly_schedule do |w| %>
+<%= r.simple_fields_for :weekly_schedule do |w| %>
 <div class="row">
-  <div class="col s12 m4 l2">
+  <div class="col s12 m4 l2 offset-l1">
     <div class="card-panel center">
       <h4 class="center">Lundi</h4>
     </div>
     <div class="card-panel center">
-     <%= w.input :worker_monday_morning, label: "Matin"%>
+      <%= w.input :worker_monday_morning, label: "Matin"%>
     </div>
     <div class="card-panel center">
       <%= w.input :worker_monday_afternoon, label: "Après-midi" %>
     </div>
   </div>
 
-<div class="col s12 m4 l2">
-  <div class="card-panel center">
-    <h4 class="center">Mardi</h4>
+  <div class="col s12 m4 l2">
+    <div class="card-panel center">
+      <h4 class="center">Mardi</h4>
+    </div>
+    <div class="card-panel center">
+      <%= w.input :worker_tuesday_morning, label: "Matin" %>
+    </div>
+    <div class="card-panel center">
+      <%= w.input :worker_tuesday_afternoon, label: "Après-midi" %>
+    </div>
   </div>
-  <div class="card-panel center">
-    <%= w.input :worker_tuesday_morning, label: "Matin" %>
-  </div>
-  <div class="card-panel center">
-    <%= w.input :worker_tuesday_afternoon, label: "Après-midi" %>
-  </div>
-</div>
-
-<div class="col s12 m4 l2">
-  <div class="card-panel center">
-    <h4 class="center">Mercredi</h4>
-  </div>
-  <div class="card-panel center">
-    <%= w.input :worker_wednesday_morning, label: "Matin" %>
-  </div>
-  <div class="card-panel center">
-    <%= w.input :worker_wednesday_afternoon, label: "Après-midi" %>
-  </div>
-</div>
-
-<div class="col s12 m4 l2">
-  <div class="card-panel center">
-    <h4 class="center">Jeudi</h4>
-  </div>
-  <div class="card-panel center">
-    <%= w.input :worker_thursday_morning, label: "Matin" %>
-  </div>
-  <div class="card-panel center">
-    <%= w.input :worker_thursday_afternoon, label: "Après-midi" %>
-  </div>
-</div>
-
-<div class="col s12 m4 l2">
-  <div class="card-panel center">
-    <h4 class="center">Vendredi</h4>
-  </div>
-  <div class="card-panel center">
-    <%= w.input :worker_friday_morning, label: "Matin" %>
-  </div>
-  <div class="card-panel center">
-    <%= w.input :worker_friday_afternoon, label: "Après-midi" %>
-  </div>
-</div>
 
   <div class="col s12 m4 l2">
-  <div class="card-panel center">
-    <h4 class="center">Récurrence</h4>
+    <div class="card-panel center">
+      <h4 class="center">Mercredi</h4>
+    </div>
+    <div class="card-panel center">
+      <%= w.input :worker_wednesday_morning, label: "Matin" %>
+    </div>
+    <div class="card-panel center">
+      <%= w.input :worker_wednesday_afternoon, label: "Après-midi" %>
+    </div>
   </div>
-  <div class="card-panel center">
+
+  <div class="col s12 m4 l2 offset-m2">
+    <div class="card-panel center">
+      <h4 class="center">Jeudi</h4>
+    </div>
+    <div class="card-panel center">
+      <%= w.input :worker_thursday_morning, label: "Matin" %>
+    </div>
+    <div class="card-panel center">
+      <%= w.input :worker_thursday_afternoon, label: "Après-midi" %>
+    </div>
+  </div>
+
+  <div class="col s12 m4 l2">
+    <div class="card-panel center">
+      <h4 class="center">Vendredi</h4>
+    </div>
+    <div class="card-panel center">
+      <%= w.input :worker_friday_morning, label: "Matin" %>
+    </div>
+    <div class="card-panel center">
+      <%= w.input :worker_friday_afternoon, label: "Après-midi" %>
+    </div>
+  </div>
+
+  <div class="col s12 m6 offset-m3 offset-l3">
+    <h4 class="center">Durée</h4>
+    <p class="center">Vous pouvez répéter votre semaine type sur plusieurs semaines, veuillez rentrer votre choix.</p>
+    <div class="card-panel center">
       <%end%>
-    <%= r.input :number_of_weeks, required: true %>
-    <%= r.hidden_field :user_id, :value => current_user.id %>
-    <%= r.hidden_field :workplace_id, :value => Workplace.first.id %>
-    <%= r.button :submit, "Enregistrer", class: "btn btn-primary btn-lg" %>
-    <% end %>
+      <%= r.input :number_of_weeks, required: true %>
+      <%= r.hidden_field :user_id, :value => current_user.id %>
+      <%= r.hidden_field :workplace_id, :value => Workplace.first.id %>
+    </div>
+    <div class="center">
+      <div style="margin:30px;">
+        <%= r.button :submit, "Enregistrer", class: "btn btn-primary btn-lg" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
