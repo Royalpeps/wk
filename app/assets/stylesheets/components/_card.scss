@@ -1,14 +1,12 @@
 /* Card design */
 .cards {
   height: 200px;
-  width: 350px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   color: white;
   position: relative;
   border-radius: 5px;
   margin-bottom: 20px;
-  margin-left: 27px;
 }
 .card-user {
   position: absolute;
@@ -21,15 +19,15 @@
   left: 10px;
   font-size: 20px;
 }
-.card-description {
+.cards-description {
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
-.card-description h2 {
+.cards-description h2 {
   font-size: 22px;
 }
-.card-description p {
+.cards-description p {
   font-size: 15px;
 }
 .card-link {

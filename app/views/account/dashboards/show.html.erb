@@ -1,41 +1,56 @@
 <!-- <ul id="slide-out" class="side-nav">
-  <li><div class="user-view">
-    <a href="#!user"><%= image_tag current_user.profile_pic, class:"circle" %></a>
-    <a href="#!name"><span class="name"><%= @client_datum.father_first_name %></span></a>
-    <a href="#!email"><span class="email"><%= current_user.email %></span></a>
-  </div></li>
-  <li><a href="#!"><i class="material-icons">insert_chart</i>Dashboard</a></li>
-  <li><a href="#!"><i class="material-icons">person</i>Profil</a></li>
+<li><div class="user-view">
+<a href="#!user"><%= image_tag current_user.profile_pic, class:"circle" %></a>
+<a href="#!name"><span class="name"><%= @client_datum.father_first_name %></span></a>
+<a href="#!email"><span class="email"><%= current_user.email %></span></a>
+</div></li>
+<li><a href="#!"><i class="material-icons">insert_chart</i>Dashboard</a></li>
+<li><a href="#!"><i class="material-icons">person</i>Profil</a></li>
 </ul>
 <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="margin:30px;">menu</i></a>
 
- -->
+-->
 
- <p class="text" id="bouton"><%= link_to "Réserver une salle de réunion", root_path, class: "waves-effect waves-light btn text" %></p>
+<p class="text" id="bouton"><%= link_to "Réserver une salle de réunion", root_path, class: "waves-effect waves-light btn text" %></p>
 
 
 <div class="row">
-  <div class="col s12 m12  l3">
+  <div class="col s12 m12 l3">
     <div class="card blue lighten-4">
       <div class="card-content grey-text">
         <span class="card-title">Évènements</span>
         <br>
-        <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://lorempixel.com/350/190');">
-          <div class="card-description">
-            <h2>Massage bébé</h2>
-            <p>Venez masser votre bébé</p>
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://lorempixel.com/350/190');">
+              <div class="card-category">Mardi 8 août</div>
+              <div class="cards-description">
+                <h2>Massage bébé</h2>
+                <p>Venez masser votre bébé</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://lorempixel.com/350/190/nature');">
-          <div class="card-description">
-            <h2>Rencontres musicales</h2>
-            <p>Venez taper dans vos mains en rythme</p>
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://lorempixel.com/350/190/nature');">
+              <div class="card-category">Vendredi 11 août</div>
+              <div class="cards-description">
+                <h2>Rencontres musicales</h2>
+                <p>Venez taper dans vos mains en rythme</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://lorempixel.com/350/190/city  ');">
-          <div class="card-description">
-            <h2>DemoDay</h2>
-            <p>Découvrez tous nos projets !</p>
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://lorempixel.com/350/190/city  ');">
+              <div class="card-category">Vendredi 4 août</div>
+              <div class="cards-description">
+                <h2>DemoDay</h2>
+                <p>Découvrez tous nos projets !</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
