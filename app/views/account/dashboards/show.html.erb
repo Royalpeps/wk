@@ -1,7 +1,6 @@
 <%= content_for :title, "W&K - Dashboard" %>
 
-
-<ul id="slide-out" class="side-nav">
+<!-- <ul id="slide-out" class="side-nav">
   <li><div class="user-view">
     <a href="#!user"><%= image_tag current_user.profile_pic, class:"circle" %></a>
     <a href="#!name"><span class="name"><%= @client_datum.father_first_name %></span></a>
@@ -12,8 +11,9 @@
 </ul>
 <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="margin:30px;">menu</i></a>
 
+ -->
 
-
+ <p class="text" id="bouton"><%= link_to "Réserver une salle de réunion", root_path, class: "waves-effect waves-light btn text" %></p>
 
 
 <div class="row">
@@ -63,9 +63,6 @@
 </div>
 </div> -->
 </div>
-
-<p class="text" id="bouton"><%= link_to "Réserver une salle de réunion", root_path, class: "waves-effect waves-light btn text" %></p>
-
 
 
 <!-- <div class="col s12 m6 l12">
