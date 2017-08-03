@@ -197,7 +197,7 @@
         <div>
           <p><%= @kid.first_name %></p>
           <p><%= @kid.last_name %></p>
-          <p><%= @kid.birthday.to_formatted_s(:rfc822) %></p>
+          <p><%= l(@kid.birthday, format: :long) %></p>
           <p><%= @kid.doudou_name %></p>
         </div>
       </div>

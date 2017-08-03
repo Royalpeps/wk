@@ -55,3 +55,9 @@ fr:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Veuillez corriger votre saisie :"
+
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%e %B %Y"
