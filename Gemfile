@@ -2,14 +2,17 @@ source 'https://rubygems.org'
 ruby '2.3.3'
 
 gem 'devise'
+gem 'devise-i18n'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
 gem 'puma'
 gem 'rails', '5.0.4'
+gem 'rails-i18n'
 gem 'redis'
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
+gem 'rails_admin-i18n'
 
 gem "coffee-rails"
 gem "gmaps4rails"

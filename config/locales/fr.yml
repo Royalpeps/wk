@@ -1,0 +1,57 @@
+fr:
+  activerecord:
+    models:
+      client_datum: Client
+      kid: Enfant
+      reservation: Réservation
+      weekly_schedule: Créneaux horaires
+
+    attributes:
+      client_datum:
+        father_first_name: Prénom
+        father_last_name: Nom
+        father_address: Adresse
+        father_phone_number: Téléphone
+        father_profession: Profession
+        mother_first_name: Prénom
+        mother_last_name: Nom
+        mother_address: Adresse
+        mother_phone_number: Téléphone
+        mother_profession: Profession
+        beneficiary_number: Numéro d'allocataire
+        insurance_name: Nom de l'assurance
+        insurance_address: Adresse de l'assurance
+        insurance_policy: Police d'assurance
+
+      kid:
+        first_name: Prénom
+        last_name: Nom
+        birthday: Anniversaire
+
+      reservation:
+        number_of_weeks: Nombre de semaines
+        starting_day: Date de début
+
+      weekly_schedule:
+        worker_monday_morning: Lundi matin
+        worker_monday_afternoon: Lundi après-midi
+        worker_tuesday_morning: Mardi matin
+        worker_tuesday_afternoon: Mardi après-midi
+        worker_wednesday_morning: Mercredi matin
+        worker_wednesday_afternoon: Mercredi après-midi
+        worker_thursday_morning: Jeudi matin
+        worker_thursday_afternoon: Jeudi après-midi
+        worker_friday_morning: Vendredi matin
+        worker_friday_afternoon: Vendredi après-midi
+
+  simple_form:
+    "yes": 'Oui'
+    "no": 'Non'
+    required:
+      text: 'necessaire'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Veuillez corriger votre saisie :"
