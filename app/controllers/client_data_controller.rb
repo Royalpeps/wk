@@ -48,7 +48,7 @@ class ClientDataController < ApplicationController
 
   private
   def kid_params
-    params.require(:kid).permit(:first_name, :last_name, :birthday)
+    params.require(:kid).permit(:first_name, :last_name, :birthday, :doudou_name)
   end
 
   def client_datum_params
