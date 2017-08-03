@@ -65,7 +65,7 @@
             <div class="input-field">
               <label class="string required" for="kid_first_name">
                 <abbr title="required">*</abbr>
-                First name
+                Prénom
               </label>
               <input class="string required" value="<%= @kid.first_name %>" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[first_name]" id="kid_first_name" />
             </div>
@@ -74,7 +74,7 @@
             <div class="input-field">
               <label class="string required" for="kid_last_name">
                 <abbr title="required">*</abbr>
-                Last name
+                Nom
               </label>
               <input class="string required" value="<%= @kid.last_name %>" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[last_name]" id="kid_last_name" />
             </div>
@@ -83,9 +83,18 @@
             <div class="input-field">
               <label class="string required" for="kid_birthday">
                 <abbr title="required">*</abbr>
-                Birthday
+                Date de naissance
               </label>
               <input class="string required" value="<%= @kid.birthday %>" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[birthday]" id="kid_birthday" />
+            </div>
+          </div>
+          <div class="string required kid_doudou_name">
+            <div class="input-field">
+              <label class="string required" for="kid_doudou_name">
+                <abbr title="required">*</abbr>
+                Prénom du doudou
+              </label>
+              <input class="string required" value="<%= @kid.doudou_name %>" autofocus="autofocus" required="required" aria-required="true" type="text" name="kid[doudou_name]" id="kid_doudou_name" />
             </div>
           </div>
         </div>
