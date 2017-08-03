@@ -84,7 +84,7 @@
     <p class="center">La date de début doit être un lundi.</p>
       <div class="card-panel center z-depth-2">
         <div class="date optional reservation_starting_day">
-          <input type="text" id="reservation_starting_day" name="reservation[starting_day]" class="datepicker date optional" />
+          <input type="text" id="reservation_starting_day" name="reservation[starting_day]" class="datepicker date optional" value="<%= @reservation.starting_day %>"/>
         </div>
       </div>
     <div class="center">
