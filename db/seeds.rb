@@ -24,6 +24,12 @@ workplace = Workplace.create!({
 }
 )
 
+demo = User.create!({
+  email: 'thomas.perouze@gmail.com',
+  admin: false,
+  password: 'secret',
+  })
+
 admin = User.create!({
   email: 'admin@workplaceandkids.fr',
   admin: true,
@@ -50,7 +56,7 @@ hugodata = ClientDatum.create!({
   mother_last_name: "Daniel",
   mother_address: "40 Quai Magellan 44000 Nantes",
   mother_phone_number: "0645652536",
-  mother_profession: "Ménagère",
+  mother_profession: "Agricultrice",
   beneficiary_number: "498946846",
   insurance_name: "MAAF",
   insurance_address: "Nantes",
@@ -85,7 +91,7 @@ thomasdata = ClientDatum.create!({
 )
 
 vincent = User.create!({
-  email: "vhrvhr@gmail.com",
+  email: "vincent.hr@gmail.com",
   admin: false,
   password: "secret",
   remote_profile_pic_url: 'https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAeeAAAAJDgxNjEwMzFlLTQwNjEtNGI4NC04YjI3LTE2NWI3Njc5OTBjNw.jpg'
@@ -94,15 +100,15 @@ vincent = User.create!({
 vincentdata = ClientDatum.create!({
   user: vincent,
   father_first_name: "Vincent",
-  father_last_name: "HR",
+  father_last_name: "Henry-Roger",
   father_address: "1000 Quai du Lynx 44000 Nantes",
   father_phone_number: "0645859687",
   father_profession: "Web Dev",
   mother_first_name: "Perrine",
-  mother_last_name: "HR",
+  mother_last_name: "Henry-Roger",
   mother_address: "40 Quai Magellan 44000 Nantes",
   mother_phone_number: "0645656525",
-  mother_profession: "PDG VlaEntreprise",
+  mother_profession: "Web Dev",
   beneficiary_number: "498456846",
   insurance_name: "MAAF",
   insurance_address: "Nantes",
@@ -138,7 +144,7 @@ gusdata = ClientDatum.create!({
 )
 
 constantin = User.create!({
-  email: "consti11@gmail.com",
+  email: "constantin.pahl@gmail.com",
   admin: false,
   password: "secret1",
   remote_profile_pic_url: 'https://avatars2.githubusercontent.com/u/28560816?v=4&s=400'
@@ -156,7 +162,7 @@ constantindata = ClientDatum.create!({
   mother_last_name: "Pahl",
   mother_address: "48 Quai Megalent 44000 Nantes",
   mother_phone_number: "0645654536",
-  mother_profession: "Ménagère",
+  mother_profession: "Etudiante",
   beneficiary_number: "898946846",
   insurance_name: "MAAF",
   insurance_address: "Nantes",
@@ -197,7 +203,7 @@ esmeralda = Kid.create!({
   user: constantin,
   first_name: "Esmeralda",
   last_name: "Pahl",
-  birthday: Date.today
+  birthday: Date.today - 5.week
 }
 )
 
