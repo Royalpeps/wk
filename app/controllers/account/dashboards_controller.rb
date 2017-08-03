@@ -12,7 +12,7 @@ class Account::DashboardsController < ApplicationController
     @events = []
 
     @events << { title: "Massage bébé", start: Time.new(2017, 8, 8, 15, 0, 0), end: Time.new(2017, 8, 8, 16, 0, 0), color: "#ee6e73"}
-    @events << { title: "Rencontres musicales", start: Time.new(2017, 8, 11, 17, 0, 0), end: Time.new(2017, 8, 11, 18, 0, 0), color: "#ee6e73"}
+    @events << { title: "Rencontres musicales", start: Time.new(2017, 8, 11, 17, 0, 0), end: Time.new(2017, 8, 11, 18, 30, 0), color: "#ee6e73"}
     @events << { title: "DemoDay", start: Time.new(2017, 8, 4, 14, 0, 0), end: Time.new(2017, 8, 4, 17, 0, 0), color: "#ee6e73"}
 
     for i in 0...@reservation.number_of_weeks do
