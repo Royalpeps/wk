@@ -33,7 +33,6 @@ class ReservationsController < ApplicationController
   end
 
   def update
-    @reservation = Reservation.find(params[:id])
     @reservation.update(reservation_update_params)
 
     @week = @reservation.weekly_schedule
