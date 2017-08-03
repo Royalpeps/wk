@@ -38,6 +38,15 @@
     }
   }
   hr, .fc-content, .fc-divider{
+    // display: none !important;
+    .fc-title {
+    font-family: 'Gloria Hallelujah';
+    font-size: 18px;
+    padding-left: 8px;
+    }
+  }
+
+  .fc-divider{
     display: none !important;
   }
 }
