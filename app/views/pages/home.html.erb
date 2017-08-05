@@ -2,98 +2,112 @@
   <div class="parallax-container">
     <div class="parallax"><%= image_tag "banner.jpg", alt: "Banner" %></div>
     <h1 class="center-align" id="first-head">WorkPlace&kids</h1>
-    <p class="text" id="bouton"><%= link_to "Réservez dès maintenant !", new_reservation_path, class: "waves-effect waves-light btn-large" %></p>
+    <!-- <p class="text" id="bouton"><%= link_to "Réservez dès maintenant !", new_reservation_path, class: "waves-effect waves-light btn-large" %></p> -->
   </div>
 </div>
+<div class="row container">
+  <h2 class="header center-align">Bienvenue</h2>
+  <div class="center-align">
+    <p class="text-darken-3 lighten-3">WorkPlace & Kids est l'association d'un espace de coworking avec une micro-crèche pour permettre aux parents de concilier vie familiale, vie sociale et vie professionnelle.</p>
+    <!-- <p class="count">Mais dépêchez-vous, il ne reste plus que <%= 20 - Reservation.count %> places disponibles !</p> -->
+  </div>
+</div>
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag "work.jpg", alt: "Work" %></div>
+</div>
+<div class="section white grey lighten-4">
   <div class="row container">
-    <h2 class="header center-align">Bienvenue</h2>
-    <div class="center-align">
-      <p class="text-darken-3 lighten-3">WorkPlace & Kids est l'association d'un espace de coworking avec une micro-crèche pour permettre aux parents de concilier vie familiale, vie sociale et vie professionnelle.</p>
-      <p class="count">Mais dépêchez-vous, il ne reste plus que <%= 20 - Reservation.count %> places disponibles !</p>
-    </div>
+    <h2 class="header center-align">Coworking</h2>
+    <p class="grey-text text-darken-3 lighten-3">WorkPlace & Kid c'est 20 postes de travail dans un lieu atypique et lumineux, en plein coeur de Nantes.</p>
   </div>
-  <div class="parallax-container">
-    <div class="parallax"><%= image_tag "work.jpg", alt: "Work" %></div>
+</div>
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag "baby.jpg", alt: "Baby" %></div>
+</div>
+<div class="section white grey lighten-4">
+  <div class="row container">
+    <h2 class="header center-align">Micro-crèche</h2>
+    <p class="grey-text text-darken-3 lighten-3">La micro-crèche pourra accueillir un
+      <strong>maximum de 10 enfants</strong>
+      de moins de 3 ans.</p>
+    <p class="grey-text text-darken-3 lighten-3">Trois professionnels de la puériculture seront là pour encadrer les enfants.</p>
   </div>
-  <div class="section white grey lighten-4">
-    <div class="row container">
-      <h2 class="header center-align">Coworking</h2>
-      <p class="grey-text text-darken-3 lighten-3">WorkPlace & Kid c'est 20 postes de travail dans un lieu atypique et lumineux, en plein coeur de Nantes.</p>
-    </div>
-  </div>
-  <div class="parallax-container">
-    <div class="parallax"><%= image_tag "baby.jpg", alt: "Baby" %></div>
-  </div>
-  <div class="section white grey lighten-4">
-    <div class="row container">
-      <h2 class="header center-align">Micro-crèche</h2>
-      <p class="grey-text text-darken-3 lighten-3">La micro-crèche pourra accueillir un <strong>maximum de 10 enfants</strong> de moins de 3 ans.</p>
-      <p class="grey-text text-darken-3 lighten-3">Trois professionnels de la puériculture seront là pour encadrer les enfants.</p>
-    </div>
-  </div>
-  <div class="parallax-container">
+</div>
+<div class="parallax-container">
+  <div class="parallax"><%= image_tag "contact.jpg", alt: "Contact" %></div>
+</div>
+<!-- <div class="parallax-container">
     <div id="map" style="width:100%;height:500px"></div>
-  </div>
+  </div> -->
+<div class="container">
   <div class="section white grey lighten-4">
-    <div class="row container">
+    <!-- <div class="row container">
       <div class="col s12 m12">
         <p><i class="material-icons">my_location</i> 13, boulevard de la liberté - 44000 Nantes</p>
         <p><i class="material-icons">phone</i> 02.40.33.77.89</p>
-      </div>
-      <div class="col s12 m12">
-        <h2 class="header center-align">Contact</h2>
+      </div> -->
+    <div class="col s12 m12">
+      <h2 class="header center-align">Contact</h2>
 
-<div class="typeform-widget" data-url="https://thomasperouze.typeform.com/to/dCDJam" style="width: 100%; height: 500px;"></div>
-<script>
-  (function () {
-    var qs,
-      js,
-      q,
-      s,
-      d = document,
-      gi = d.getElementById,
-      ce = d.createElement,
-      gt = d.getElementsByTagName,
-      id = "typef_orm",
-      b = "https://embed.typeform.com/";
-    if (!gi.call(d, id)) {
-      js = ce.call(d, "script");
-      js.id = id;
-      js.src = b + "embed.js";
-      q = gt.call(d, "script")[0];
-      q.parentNode.insertBefore(js, q)
-    }
-  })()
-</script>
-<div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">
-  powered by
-  <a href="https://www.typeform.com/examples/?utm_campaign=dCDJam&amp;utm_source=typeform.com-9419260-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded-poweredbytypeform&amp;utm_term=FR" style="color: #999" target="_blank">Typeform</a>
-</div>
+      <div class="typeform-widget" data-url="https://thomasperouze.typeform.com/to/dCDJam" style="width: 100%; height: 500px;"></div>
+      <script>
+        (function () {
+          var qs,
+            js,
+            q,
+            s,
+            d = document,
+            gi = d.getElementById,
+            ce = d.createElement,
+            gt = d.getElementsByTagName,
+            id = "typef_orm",
+            b = "https://embed.typeform.com/";
+          if (!gi.call(d, id)) {
+            js = ce.call(d, "script");
+            js.id = id;
+            js.src = b + "embed.js";
+            q = gt.call(d, "script")[0];
+            q.parentNode.insertBefore(js, q)
+          }
+        })()
+      </script>
+      <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">
+        powered by
+        <a href="https://www.typeform.com/examples/?utm_campaign=dCDJam&amp;utm_source=typeform.com-9419260-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded-poweredbytypeform&amp;utm_term=FR" style="color: #999" target="_blank">Typeform</a>
       </div>
     </div>
   </div>
+</div>
+</div>
 
+<%= content_for(:after_js) do %>
+<script>
+$(document).ready(function () {
+  $('.parallax').parallax();
+});
+</script>
 
- <%= content_for(:after_js) do %>
-   <script>
-     $(document).ready(function(){
-       $('.parallax').parallax();
-     });
-   </script>
-
-   <script>
-     $(document).ready(function() {
-       var handler = Gmaps.build('Google');
-       handler.buildMap({provider: { scrollwheel: false, zoomControl: false }, internal: { id: 'map' } }, function() {
-         markers = handler.addMarkers(<%= raw @markers.to_json %>);
-         handler.bounds.extendWith(markers);
-         handler.fitMapToBounds();
-         if (markers.length == 0) {
-           handler.getMap().setZoom(8);
-         } else if (markers.length == 1) {
-           handler.getMap().setZoom(15);
-         }
-       });
-     });
-   </script>
- <% end %>
+<script>
+$(document).ready(function () {
+  var handler = Gmaps.build('Google');
+  handler.buildMap({
+    provider: {
+      scrollwheel: false,
+      zoomControl: false
+    },
+    internal: {
+      id: 'map'
+    }
+  }, function () {
+    markers = handler.addMarkers(<%= raw @markers.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    if (markers.length == 0) {
+      handler.getMap().setZoom(8);
+    } else if (markers.length == 1) {
+      handler.getMap().setZoom(15);
+    }
+  });
+});
+</script>
+<% end %>
